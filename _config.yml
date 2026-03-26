@@ -1,0 +1,12 @@
+# Book settings
+title: "My Jupyter Book"
+author: "esk0ik3"
+language: "ja"
+logo: ""
+
+# HTML settings
+html:
+  favicon: ""
+  use_repository_button: true
+  use_issues_button: false
+  use_edit_page_button: false
