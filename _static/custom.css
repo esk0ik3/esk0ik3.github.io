@@ -1,16 +1,92 @@
-/* 全体のメインカラー（リンクやボタンの色）を変える */
+/* --- High-Power Laser Lab Theme --- */
+
 :root {
-    --pst-color-primary: #004d99;      /* 濃い青色（光学・誠実なイメージ） */
-    --pst-color-info: #0073e6;
+    /* レーザー光のような発光色 */
+    --pst-color-primary: #00ffcc;           /* シアンレーザー */
+    --pst-color-background: #0a0a0c;      /* 暗黒の光学定盤 */
+    --pst-color-surface: #161b22;         /* 暗幕の裏側 */
+    --pst-color-text-base: #e6edf3;
+    --pst-color-info: #ff00ff;             /* 警告用マゼンタ */
 }
 
-/* サイドバーの背景色を少し変える */
+/* 全体の背景：ノイズの乗った暗黒 */
+body {
+    background-color: var(--pst-color-background);
+    background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+    background-size: 20px 20px; /* 定盤のネジ穴をイメージ */
+}
+
+/* サイドバー：グラスモフィズム（透ける光学素子） */
 .bd-sidebar {
-    background-color: #f8f9fa;
+    background: rgba(22, 27, 34, 0.8) !important;
+    backdrop-filter: blur(12px);
+    border-right: 1px solid var(--pst-color-primary);
 }
 
-/* 記事内の見出し（H1, H2）の色を変える */
-h1, h2 {
-    color: #003366;
-    border-bottom: 2px solid #003366;
+/* 見出し：クロマティック・アベレーション（色収差）風 */
+h1, h2, h3 {
+    color: var(--pst-color-primary) !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; /* 擬似的な色収差 */
+    border-bottom: 1px solid var(--pst-color-primary);
+    padding-bottom: 10px;
+}
+
+/* コードブロック：コンソール画面風 */
+div.highlight {
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+    border-radius: 0;
+}
+
+/* リンク：触れると発光する回折光 */
+a {
+    color: #ff00ff !important;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-shadow: 0 0 8px #ff00ff, 0 0 20px #00ffcc;
+    text-decoration: none !important;
+    filter: hue-rotate(90deg); /* ホバーで色相が回る */
+}
+
+/* 箇条書き：特異点（Lemon/Star）っぽいマーカーに変更 */
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "✦"; /* 偏光特異点的な記号 */
+    color: var(--pst-color-primary);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); text-shadow: 0 0 10px var(--pst-color-primary); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+/* 画像：少しだけグロー（発光）させる */
+img {
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    filter: contrast(1.1);
+}
+
+/* スクロールバーもサイバーに */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--pst-color-primary);
+    border-radius: 10px;
 }
