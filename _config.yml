@@ -1,8 +1,4 @@
-title: ベクトルビーム研究
+title: ベクトルビーム研究メモ
 author: esk0ik3
-logo: "" # ロゴ画像があればパスを指定できます
-
-html:
-  use_repository_button: true # 右上にGitHubへのリンクボタンを自動生成
-  extra_css:
-    - _static/custom.css      # あなたのCSSを読み込む指示
+execute:
+  execute_notebooks: "off"
