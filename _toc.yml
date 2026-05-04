@@ -1,4 +1,4 @@
 format: jb-book
 root: intro
 chapters:
-  - file: notebooks/sample
+  - file: 20260504_memo1
