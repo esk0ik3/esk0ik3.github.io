@@ -3,8 +3,6 @@ author: "esk0ik3"
 execute:
   execute_notebooks: off
 html:
-  extra_javascript:
-    - _static/custom.js
   extra_css:
     - _static/custom.css
   static_path:
