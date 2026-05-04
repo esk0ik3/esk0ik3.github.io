@@ -4,5 +4,5 @@
 
 * [数学について](math.md)
 * [物理について](physics.md)
-* [シミュレーションサンプル](simulation.ipynb)
+* [三角関数について](simulation.ipynb)
 * [光学について](notes/optics.md)
