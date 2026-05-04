@@ -5,6 +5,7 @@ on:
     branches:
       - main
 
+# ロボットに書き込み権限を明示的に与える
 permissions:
   contents: write
 
@@ -25,13 +26,16 @@ jobs:
 
     - name: Build the book
       run: |
-        # ここを Python モジュール呼び出しに変更
+        # コマンドが見つからないエラーを回避するため python -m で実行
         python -m jupyter_book build .
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        # Jupyter Bookが生成したHTMLがある場所を指定
         publish_dir: ./_build/html
+        # Jekyllを無効化するファイルを自動生成
+        nojekyll: true 
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
