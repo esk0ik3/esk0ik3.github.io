@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>科学ブログ - E=mc² への旅</title>
+  <title>ベクトルビーム研究 - 参考論文と教科書</title>
   <!-- MathJax for rendering beautiful math -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -23,11 +23,11 @@
 
     /* ヘッダー */
     header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
       color: white;
       padding: 60px 40px;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+      box-shadow: 0 10px 30px rgba(33, 150, 243, 0.2);
       position: relative;
       overflow: hidden;
     }
@@ -62,11 +62,6 @@
       margin-bottom: 5px;
     }
 
-    .formula-display {
-      font-size: 1.3em;
-      margin-top: 15px;
-    }
-
     /* ナビゲーション */
     nav {
       background: white;
@@ -93,7 +88,7 @@
     nav a {
       display: block;
       padding: 15px 25px;
-      color: #667eea;
+      color: #2196F3;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
@@ -101,8 +96,8 @@
     }
 
     nav a:hover {
-      color: #764ba2;
-      border-bottom-color: #667eea;
+      color: #1565C0;
+      border-bottom-color: #2196F3;
       background: #f5f7fa;
     }
 
@@ -125,11 +120,11 @@
     }
 
     .section-title {
-      color: #667eea;
+      color: #2196F3;
       font-size: 2em;
       margin-bottom: 30px;
       padding: 30px 40px 0 40px;
-      border-bottom: 3px solid #764ba2;
+      border-bottom: 3px solid #1565C0;
       padding-bottom: 15px;
     }
 
@@ -167,7 +162,7 @@
     }
 
     .article-card:hover h3 {
-      color: #667eea;
+      color: #2196F3;
     }
 
     .article-meta {
@@ -206,32 +201,32 @@
 
     .tag {
       display: inline-block;
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.1) 100%);
-      color: #667eea;
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(21, 101, 192, 0.1) 100%);
+      color: #2196F3;
       padding: 5px 12px;
       border-radius: 20px;
       font-size: 0.85em;
       font-weight: 600;
-      border: 1px solid rgba(102, 126, 234, 0.3);
+      border: 1px solid rgba(33, 150, 243, 0.3);
       transition: all 0.3s ease;
       text-decoration: none;
       cursor: pointer;
     }
 
     .tag:hover {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.2) 100%);
-      border-color: #667eea;
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.4) 0%, rgba(21, 101, 192, 0.2) 100%);
+      border-color: #2196F3;
     }
 
     .read-more {
-      color: #667eea;
+      color: #2196F3;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
 
     .read-more:hover {
-      color: #764ba2;
+      color: #1565C0;
     }
 
     /* サイドバー */
@@ -249,11 +244,11 @@
     }
 
     .sidebar-box h3 {
-      color: #667eea;
+      color: #2196F3;
       font-size: 1.3em;
       margin-bottom: 20px;
       padding-bottom: 10px;
-      border-bottom: 2px solid #764ba2;
+      border-bottom: 2px solid #1565C0;
     }
 
     .about-content {
@@ -276,7 +271,7 @@
     }
 
     .category-list a {
-      color: #667eea;
+      color: #2196F3;
       text-decoration: none;
       font-weight: 500;
       transition: all 0.3s ease;
@@ -286,7 +281,7 @@
     }
 
     .category-list a:hover {
-      color: #764ba2;
+      color: #1565C0;
       padding-left: 5px;
     }
 
@@ -326,7 +321,7 @@
     }
 
     .recent-posts a:hover {
-      color: #667eea;
+      color: #2196F3;
     }
 
     .post-date {
@@ -348,7 +343,7 @@
     }
 
     footer a {
-      color: #667eea;
+      color: #2196F3;
       text-decoration: none;
     }
 
@@ -408,11 +403,8 @@
   <!-- ヘッダー -->
   <header>
     <div class="header-content">
-      <h1>🔬 科学ブログ</h1>
-      <p>物理学、相対性理論、そして宇宙の謎を探求する</p>
-      <div class="formula-display">
-        \( E=mc^2 \)
-      </div>
+      <h1>🔬 ベクトルビーム研究</h1>
+      <p>光学における偏光状態のベクトル化を探求する</p>
     </div>
   </header>
 
@@ -420,9 +412,8 @@
   <nav>
     <ul>
       <li><a href="#home">ホーム</a></li>
-      <li><a href="#articles">ブログ</a></li>
+      <li><a href="#articles">記事</a></li>
       <li><a href="#about">概要</a></li>
-      <li><a href="#contact">お問い合わせ</a></li>
     </ul>
   </nav>
 
@@ -430,78 +421,31 @@
   <div class="container">
     <!-- メインコンテンツ -->
     <div class="main-content">
-      <h2 class="section-title">📚 最新の記事</h2>
+      <h2 class="section-title">📚 ベクトルビーム参考資料</h2>
       <div class="articles">
         
         <!-- 記事1 -->
         <article class="article-card">
           <div class="article-header">
-            <h3>E=mc² の謎を解く：アインシュタインの最高傑作</h3>
+            <h3>ベクトルビームの参考論文と教科書</h3>
             <div class="article-meta">
               <span>📅 2026年5月4日</span>
               <span>✍️ esk0ik3</span>
-              <span>⏱️ 5分読了</span>
             </div>
           </div>
           <p class="article-excerpt">
-            アインシュタインの最も有名な方程式 \( E=mc^2 \) について、その背景にある物理学的な意味を探ります。
-            エネルギーと質量の関係がいかに深いのか、そして現代物理学にいかに影響を与えているのかを学びます。
+            ベクトルビームと関連のある教科書・論文の包括的なガイド。基本的な教科書から応用論文まで、
+            レビュー論文、レーザー加工、光トラッピング、光スピントロニクス、生成方法など、
+            ベクトルビーム研究に必要な参考資料を体系的にまとめています。
           </p>
           <div class="article-footer">
             <div class="article-tags">
-              <span class="tag">相対性理論</span>
-              <span class="tag">物理学</span>
-              <span class="tag">エネルギー</span>
+              <span class="tag">ベクトルビーム</span>
+              <span class="tag">光学</span>
+              <span class="tag">偏光</span>
+              <span class="tag">SLM</span>
             </div>
-            <a href="articles/article1.html" class="read-more">続きを読む →</a>
-          </div>
-        </article>
-
-        <!-- 記事2 -->
-        <article class="article-card">
-          <div class="article-header">
-            <h3>ニュートンの第二法則：力と加速度の関係</h3>
-            <div class="article-meta">
-              <span>📅 2026年5月1日</span>
-              <span>✍️ esk0ik3</span>
-              <span>⏱️ 7分読了</span>
-            </div>
-          </div>
-          <p class="article-excerpt">
-            古典力学の基礎となるニュートンの第二法則 \( F=ma \) について、その導出と応用を詳しく説明します。
-            この基本的な方程式が、どのように複雑な物理現象を説明するのかを見ていきましょう。
-          </p>
-          <div class="article-footer">
-            <div class="article-tags">
-              <span class="tag">古典力学</span>
-              <span class="tag">ニュートン</span>
-              <span class="tag">物理学</span>
-            </div>
-            <a href="articles/article2.html" class="read-more">続きを読む →</a>
-          </div>
-        </article>
-
-        <!-- 記事3 -->
-        <article class="article-card">
-          <div class="article-header">
-            <h3>光速度の一定性：相対性理論の基礎</h3>
-            <div class="article-meta">
-              <span>📅 2026年4月28日</span>
-              <span>✍️ esk0ik3</span>
-              <span>⏱️ 6分読了</span>
-            </div>
-          </div>
-          <p class="article-excerpt">
-            特殊相対性理論の基本となる光速度の一定性。すべての慣性系で光速 \( c \approx 3 \times 10^8 \) m/s は一定であるという仮定が、
-            どのように時間と空間の概念を変えたのかを探ります。
-          </p>
-          <div class="article-footer">
-            <div class="article-tags">
-              <span class="tag">相対性理論</span>
-              <span class="tag">光</span>
-              <span class="tag">物理学</span>
-            </div>
-            <a href="articles/article3.html" class="read-more">続きを読む →</a>
+            <a href="_posts/2026-05-04-vector-beams-reference.md" class="read-more">記事を読む →</a>
           </div>
         </article>
 
@@ -513,44 +457,43 @@
       
       <!-- 概要 -->
       <div class="sidebar-box">
-        <h3>ℹ️ このブログについて</h3>
+        <h3>ℹ️ このサイトについて</h3>
         <div class="about-content">
           <p>
-            科学と物理学の美しさを探求するブログです。基本的な物理法則から現代物理学の最前線まで、
-            わかりやすく解説します。
+            ベクトルビームの研究に関する参考資料と知識をまとめたサイトです。
           </p>
           <p>
-            MathJax を使用して美しい数式を表示しています。
+            教科書、レビュー論文、応用研究など、様々な分野の論文を体系的に紹介しています。
           </p>
         </div>
       </div>
 
       <!-- カテゴリ -->
       <div class="sidebar-box">
-        <h3>📁 カテゴリ</h3>
+        <h3>📁 研究分野</h3>
         <ul class="category-list">
           <li>
             <a href="#category">
-              <span>相対性理論</span>
-              <span class="category-count">2</span>
-            </a>
-          </li>
-          <li>
-            <a href="#category">
-              <span>古典力学</span>
+              <span>基本理論</span>
               <span class="category-count">1</span>
             </a>
           </li>
           <li>
             <a href="#category">
-              <span>量子力学</span>
-              <span class="category-count">0</span>
+              <span>応用研究</span>
+              <span class="category-count">1</span>
             </a>
           </li>
           <li>
             <a href="#category">
-              <span>宇宙物理学</span>
-              <span class="category-count">0</span>
+              <span>生成方法</span>
+              <span class="category-count">1</span>
+            </a>
+          </li>
+          <li>
+            <a href="#category">
+              <span>光学シミュレーション</span>
+              <span class="category-count">1</span>
             </a>
           </li>
         </ul>
@@ -558,19 +501,11 @@
 
       <!-- 最新記事 -->
       <div class="sidebar-box">
-        <h3>🆕 最新記事</h3>
+        <h3>🆕 公開中</h3>
         <ul class="recent-posts">
           <li>
-            <a href="articles/article1.html">E=mc² の謎を解く：アインシュタインの最高傑作</a>
+            <a href="_posts/2026-05-04-vector-beams-reference.md">ベクトルビームの参考論文と教科書</a>
             <div class="post-date">2026年5月4日</div>
-          </li>
-          <li>
-            <a href="articles/article2.html">ニュートンの第二法則：力と加速度の関係</a>
-            <div class="post-date">2026年5月1日</div>
-          </li>
-          <li>
-            <a href="articles/article3.html">光速度の一定性：相対性理論の基礎</a>
-            <div class="post-date">2026年4月28日</div>
           </li>
         </ul>
       </div>
@@ -580,7 +515,7 @@
 
   <!-- フッター -->
   <footer>
-    <p>© 2026 esk0ik3 | 科学ブログ</p>
+    <p>© 2026 esk0ik3 | ベクトルビーム研究</p>
     <p>Last updated: 2026-05-04</p>
     <p><a href="https://github.com/esk0ik3">GitHub</a></p>
   </footer>
