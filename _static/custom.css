@@ -1,53 +1,91 @@
-/* --- Swiss Minimalist Brutalism --- */
+/* --- Summer Breeze Theme --- */
 
 :root {
-    --pst-color-primary: #FF4F00;         /* インターナショナル・オレンジ */
-    --pst-color-background: #F2F2F2;      /* わずかにグレーがかった白（紙の質感） */
-    --pst-color-text-base: #1A1A1A;       /* 深い黒 */
+    /* 真夏の色彩設計 */
+    --pst-color-primary: #0077b6;         /* 深みのあるシーブルー */
+    --pst-color-background: #f0f9ff;      /* 澄み切った夏の空色（非常に薄い青） */
+    --pst-color-text-base: #1e293b;       /* 濡れた岩場のようなダークグレー */
+    --pst-color-info: #fbbf24;             /* 真夏の太陽光（イエロー） */
+    --pst-color-surface: #ffffff;
 }
 
 body {
     background-color: var(--pst-color-background);
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    color: var(--pst-color-text-base);
+    /* 遠くの波打ち際のような微かなグラデーション */
+    background-image: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
+    background-attachment: fixed;
 }
 
-/* 記事部分を一つの「カード」のように扱う */
+/* 記事エリア：白いリネンシャツのような清潔感 */
 .bd-main {
     background: white !important;
-    border: 3px solid var(--pst-color-text-base);
-    box-shadow: 15px 15px 0px 0px var(--pst-color-text-base); /* 影ではなく実線のブロック */
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px -5px rgba(0, 119, 182, 0.1);
+    border: 1px solid rgba(0, 119, 182, 0.05);
 }
 
-/* 見出し：あえて装飾を捨てて、文字の大きさと太さだけで語る */
-h1, h2, h3 {
-    font-weight: 900 !important;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    color: var(--pst-color-text-base);
-    border: none !important;
+/* サイドバー：入道雲をイメージした柔らかい白 */
+.bd-sidebar {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(8px);
+    border-right: 1px solid rgba(0, 119, 182, 0.1);
 }
 
-h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+/* 見出し：光を反射する水面のような透明感 */
+h1, h2 {
+    color: var(--pst-color-primary) !important;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
 
-/* リンク：下線を太くし、ホバーでオレンジを反転 */
+h1 {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--pst-color-primary), var(--pst-color-info));
+    border-radius: 2px;
+}
+
+/* リンク：夏の夕暮れのオレンジをアクセントに */
 a {
-    color: var(--pst-color-text-base) !important;
-    text-decoration: underline 3px var(--pst-color-primary) !important;
-    transition: all 0.2s ease;
+    color: var(--pst-color-primary) !important;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--pst-color-primary);
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    background-color: var(--pst-color-primary);
-    color: white !important;
-    text-decoration: none !important;
+    color: #f59e0b !important; /* オレンジに変化 */
+    border-bottom: 1px solid #f59e0b;
+    background-color: rgba(251, 191, 36, 0.1);
 }
 
-/* コードブロック：白黒のコントラスト */
+/* コードブロック：プールサイドのタイルのような質感 */
 div.highlight {
-    border: 2px solid var(--pst-color-text-base);
-    border-radius: 0;
-    filter: grayscale(1); /* コードの色味すら排除 */
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid var(--pst-color-primary);
+    border-radius: 8px;
+}
+
+/* テーブル：読みやすさを重視 */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: var(--pst-color-primary);
 }
