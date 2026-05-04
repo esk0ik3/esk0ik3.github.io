@@ -1,10 +1,4 @@
 title: "My Research & Notes"
 author: "esk0ik3"
-
-# 以下の html セクションをシンプルにします
-html:
-  use_repository_button: true
-  use_issues_button: true
-
 execute:
   execute_notebooks: off
