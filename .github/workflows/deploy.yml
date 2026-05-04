@@ -3,7 +3,7 @@ name: deploy-book
 on:
   push:
     branches:
-      - main  # mainブランチにプッシュされた時に実行
+      - main
 
 jobs:
   deploy-book:
@@ -20,10 +20,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install jupyter-book
+        # バージョンを安定した 0.15.1 に固定します
+        pip install jupyter-book==0.15.1
 
     - name: Build the book
       run: |
+        # 強制的に全てのページをビルド
         jupyter-book build .
 
     - name: Deploy to GitHub Pages
