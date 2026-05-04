@@ -25,17 +25,12 @@ jobs:
 
     - name: Build the book
       run: |
-        # 本を組み立てる
-        python -m jupyter_book build .
-        # 【デバッグ用】本当にファイルが作られたかログに表示させる
-        echo "--- 生成されたファイル一覧 ---"
-        ls -R _build/html
+        # 確実にカレントディレクトリ（.）をビルド
+        jupyter-book build .
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_build/html
-        # peaceiris版はデフォルトで .nojekyll を作るので、設定は不要です
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        # ユーザー用リポジトリ(username.github.io)の場合、cname設定等が不要ならこれでOK
