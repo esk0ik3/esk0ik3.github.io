@@ -26,7 +26,8 @@ jobs:
     # 本を組み立てる（ここで _build/html フォルダが作られます）
     - name: Build the book
       run: |
-        jupyter-book build .
+        # 強制的にキャッシュをクリアしてビルド
+        jb build .
 
     # 完成した中身（_build/html の中身）を gh-pages に届ける
     - name: Deploy to GitHub Pages
