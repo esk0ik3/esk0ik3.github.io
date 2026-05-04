@@ -26,9 +26,12 @@ jobs:
     - name: Build the book
       run: |
         jupyter-book build .
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_build/html
+        # 以下の3行を追記
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        keep_files: true
