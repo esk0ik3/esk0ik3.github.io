@@ -10,3 +10,4 @@ html:
   use_repository_button: true
   use_issues_button: false
   use_edit_page_button: false
+permalink: /posts/:title.html
