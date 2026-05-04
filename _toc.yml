@@ -3,3 +3,4 @@ root: index
 chapters:
   - file: math
   - file: physics
+  - file: simulation
