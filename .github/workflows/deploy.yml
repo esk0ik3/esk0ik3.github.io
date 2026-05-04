@@ -23,15 +23,16 @@ jobs:
       run: |
         pip install -U jupyter-book
 
+    # 本を組み立てる（ここで _build/html フォルダが作られます）
     - name: Build the book
       run: |
         jupyter-book build .
+
+    # 完成した中身（_build/html の中身）を gh-pages に届ける
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
-        # 以下の3行を追記
+        publish_dir: ./_build/html  # ← ここが重要！
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
-        keep_files: true
