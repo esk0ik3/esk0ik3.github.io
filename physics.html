@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>ヘルムホルツ方程式 &#8212; My Research &amp; Notes</title>
+    <title>物理について &#8212; My Research &amp; Notes</title>
   
   
   
@@ -170,9 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="math.html">数学について</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ヘルムホルツ方程式</a></li>
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">物理について</a></li>
 </ul>
 
     </div>
@@ -311,7 +309,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ヘルムホルツ方程式</h1>
+    <h1>物理について</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -321,11 +319,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ヘルムホルツ方程式</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">スカラー場</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ベクトル場</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">マクスウェル方程式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radially-polarized-beam">径方向偏光（Radially Polarized Beam）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -336,215 +333,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <ul class="simple">
-<li><p><span class="xref myst">ヘルムホルツ方程式</span></p></li>
-<li><p><span class="xref myst">スカラー場</span></p></li>
-<li><p><span class="xref myst">ベクトル場</span></p></li>
-</ul>
-<section id="id1">
-<h1>ヘルムホルツ方程式<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>ファラデーの法則</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times \boldsymbol {E} (\boldsymbol {r} , t) = -\frac{\partial \boldsymbol {B} (\boldsymbol {r} , t) } {\partial t}
-\]</div>
-<p>に対して両辺の回転を取ると</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times (\nabla \times \boldsymbol {E} (\boldsymbol {r} , t) ) = - \mu_0 \nabla \times \frac{\partial \boldsymbol {H} (\boldsymbol {r} , t) }{\partial t}
-\]</div>
-<p>となります.ここでアンペールの法則</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times \boldsymbol {H} (\boldsymbol {r} , t) = \epsilon_0 \frac{\partial \boldsymbol {E} (\boldsymbol {r} , t) }{\partial t}
-\]</div>
-<p>を代入すると</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times (\nabla \times \boldsymbol {E} (\boldsymbol {r} , t) ) = - \epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} , t) }{\partial t^2}
-\]</div>
-<p>を得ます.ここで</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times (\nabla \times \boldsymbol {E} (\boldsymbol {r} , t) ) = \nabla(\nabla \cdot \boldsymbol {E} (\boldsymbol {r} , t) ) - \nabla^2 \boldsymbol {E} (\boldsymbol {r} , t)
-\]</div>
-<p>より</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla(\nabla \cdot \boldsymbol {E} (\boldsymbol {r} , t) ) - \nabla^2 \boldsymbol {E} (\boldsymbol {r} , t) = - \epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} , t) }{\partial t^2}
-\]</div>
-<p>を得ます.電荷がない場合は</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \cdot \boldsymbol {E} (\boldsymbol {r} , t) = 0
-\]</div>
-<p>より</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
--\nabla^2 \boldsymbol {E} (\boldsymbol {r} , t) &amp;= -\epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} , t) }{\partial t^2} \\
-\nabla^2 \boldsymbol {E} (\boldsymbol {r} , t) &amp;= \epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} , t) }{\partial t^2} 
-\end{aligned}
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-\therefore \nabla^2 \boldsymbol{E} (\boldsymbol {r} , t) - \epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} , t)}{\partial t^2} = 0
-\]</div>
-<p>となります.ここで解の形を</p>
-<div class="math notranslate nohighlight">
-\[
-\boldsymbol {E} (\boldsymbol {r} , t) = \boldsymbol {E} (\boldsymbol {r}) f(t)
-\]</div>
-<p>と分離できると仮定します.これを代入すると</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) f(t) - \epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} ) f(t)}{\partial t^2} = 0
-\]</div>
-<p>を得ます.ここでフーリエ変換</p>
-<div class="math notranslate nohighlight">
-\[
-F(\omega) = \frac{1}{\sqrt{2 \pi}}\int_{- \infty}^{\infty}f(t) e^{i \omega t}dt
-\]</div>
-<p>を考えると</p>
-<div class="math notranslate nohighlight">
-\[
-f(t) = \frac{1}{\sqrt{2 \pi}}\int_{- \infty}^{\infty}F(\omega) e^{-i \omega t}d \omega
-\]</div>
-<p>であるので代入すると</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) \frac{1}{\sqrt{2 \pi}}\int_{- \infty}^{\infty}F(\omega) e^{-i \omega t}d \omega - \epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} )}{\partial t^2} \frac{1}{\sqrt{2 \pi}}\int_{- \infty}^{\infty}F(\omega) e^{-i \omega t}d \omega &amp;= 0 \\
-\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) \frac{1}{\sqrt{2 \pi}}\int_{- \infty}^{\infty}F(\omega) e^{-i \omega t}d \omega + \frac{\epsilon_0 \mu_0 \omega ^2}{\sqrt{2 \pi}} \boldsymbol {E} (\boldsymbol {r} ) \int_{- \infty}^{\infty}F(\omega) e^{-i \omega t}d \omega &amp;= 0 \\
-\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) + \epsilon_0 \mu_0 \omega ^2 \boldsymbol{E} (\boldsymbol {r} ) &amp;= 0 \\
-\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) + \frac{\omega ^2}{c^2} \boldsymbol{E} (\boldsymbol {r} ) &amp;= 0 \\
-\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) + \biggl (\frac{2 \pi f}{f \lambda} \biggr ) ^2 \boldsymbol{E} (\boldsymbol {r} ) &amp;= 0 \\
-\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) + \biggl (\frac{2 \pi}{\lambda} \biggr ) ^2 \boldsymbol{E} (\boldsymbol {r} ) &amp;= 0 \\
-\therefore \nabla^2 \boldsymbol{E} (\boldsymbol {r} ) + k ^2 \boldsymbol{E} (\boldsymbol {r} ) &amp;= 0
-\end{aligned}
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-&amp;\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) \frac{1}{\sqrt{2 \pi}}\int_{- \infty}^{\infty}F(\omega) e^{-i \omega t}d \omega 
-- \epsilon_0 \mu_0 \frac{\partial^2 \boldsymbol {E} (\boldsymbol {r} )}{\partial t^2} \frac{1}{\sqrt{2 \pi}}\int_{- \infty}^{\infty}F(\omega) e^{-i \omega t}d \omega
-&amp;&amp;= 0 \\
-&amp;\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) + \epsilon_0 \mu_0 \omega ^2 \boldsymbol{E} (\boldsymbol {r} )
-&amp;&amp;= 0 \\
-&amp;\nabla^2 \boldsymbol{E} (\boldsymbol {r} ) + k ^2 \boldsymbol{E} (\boldsymbol {r} )
-&amp;&amp;= 0
-\end{aligned}
-\end{split}\]</div>
-<p>を得ます.これはヘルムホルツ方程式と言うタイプの偏微分方程式です.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>物理について<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>ここでは物理学に関するトピック、特に光学についてまとめています。</p>
 <section id="id2">
-<h1>スカラー場<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
-<p>もし電場がスカラー場(偏光分布が直線であるので厳密にはベクトル場であるが座標系を適当に選べば電場の大きさだけを考えればいい)であれば</p>
-<div class="math notranslate nohighlight">
-\[
-\boldsymbol{E}(\boldsymbol{r}) = u(x, y, z) e^{ikz} 
-\]</div>
-<p>のように書けます.これを先ほどのヘルムホルツ方程式に代入すると</p>
+<h2>マクスウェル方程式<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>文中に数式を入れる場合は、シングルドル記号で囲みます。
+例えば、電磁波の基本となるのはマクスウェル方程式 <span class="math notranslate nohighlight">\(\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}\)</span> です。</p>
+</section>
+<section id="radially-polarized-beam">
+<h2>径方向偏光（Radially Polarized Beam）<a class="headerlink" href="#radially-polarized-beam" title="Permalink to this heading">#</a></h2>
+<p>独立した行で数式を表示したい場合は、ダブルドル記号 <code class="docutils literal notranslate"><span class="pre">$$</span></code> で囲みます。</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{aligned}
-\Bigl (\frac{\partial ^2}{\partial ^2 x} + \frac{\partial ^2}{\partial ^2 y} + \frac{\partial ^2}{\partial ^2 z} \Bigr ) \bigl (u(x, y, z) e^{ikz} \bigr ) + k^2 u(x, y, z) e^{ikz} &amp;= 0 \\
-\Bigl (\frac{\partial ^2 u}{\partial ^2 x} + \frac{\partial ^2 u}{\partial ^2 y} + \frac{\partial ^2 u}{\partial ^2 z} + 2ik \frac{\partial u}{\partial z} - k^2 u + k^2 u \Bigr ) e^{ikz} &amp;= 0 \\
-\frac{\partial ^2 u}{\partial ^2 x} + \frac{\partial ^2 u}{\partial ^2 y} + \frac{\partial ^2 u}{\partial ^2 z} + 2ik \frac{\partial u}{\partial z} &amp;= 0
-\end{aligned}
+\mathbf{E}(r, \phi) = E_0(r) \begin{pmatrix} \cos \phi \\ \sin \phi \end{pmatrix}
 \end{split}\]</div>
-<p>を得ます.ここで近軸近似を考えると</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{\partial ^2 u}{\partial ^2 x} + \frac{\partial ^2 u}{\partial ^2 y} + 2ik \frac{\partial u}{\partial z} = 0
-\]</div>
-<p>を得ます.</p>
+<p>このように行列を使って偏光状態を記述することも可能です。</p>
 </section>
 <section id="id3">
-<h1>ベクトル場<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
-<p>演算する関数がスカラー場の時、ラプラシアンを演算するということは</p>
+<h2>フーリエ変換<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>光学シミュレーションで頻繁に使用する2次元フーリエ変換の定義は以下の通りです。</p>
 <div class="math notranslate nohighlight">
 \[
-\nabla ^2 f = \nabla \cdot (\nabla f)
+G(f_x, f_y) = \iint_{-\infty}^{\infty} g(x, y) e^{-j 2\pi (f_x x + f_y y)} dx dy
 \]</div>
-<p>となり勾配をとった後に発散をとることに相当します.<strong>(スカラーラプラス演算子)</strong></p>
-<p>演算する関数がベクトル場の時,ラプラシアンを演算するということは</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla ^2 \boldsymbol{f} = \nabla (\nabla \cdot \boldsymbol{f})
--\nabla \times (\nabla \times \boldsymbol{f})
-\]</div>
-<p>に相当します.<strong>(ベクトルラプラス演算子)</strong></p>
-<p>今は電荷が存在しないマクスウェル方程を考えているので右辺第1項はゼロになり</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times \nabla \times \boldsymbol{E} -k^2 \boldsymbol{E} = 0
-\]</div>
-<p>となります.ここで解の形として</p>
-<div class="math notranslate nohighlight">
-\[
-\boldsymbol{E}(r, z) = U(r, z) e^{ikz} \boldsymbol{e}_\phi
-\]</div>
-<p>のように軸対称な解を考えます.
-円筒座標系でのナブラは</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla = \frac{\partial}{\partial r} \boldsymbol{e} _ r + \frac{1}{r} \frac{\partial}{\partial \phi} + \frac{\partial}{\partial z} \boldsymbol{e} _ z
-\]</div>
-<p>となりますが,今は <span class="math notranslate nohighlight">\(\phi\)</span> が一定であるので</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla = \frac{\partial}{\partial r} \boldsymbol{e}_r + \frac{\partial}{\partial z} \boldsymbol{e}_z
-\]</div>
-<p>となります.これを踏まえたうえで回転をとると</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times \boldsymbol{E} = \Bigl (\frac{1}{r} \frac{\partial}{\partial \phi} E _ z - \frac{\partial}{\partial z} E_\phi \Bigr ) \boldsymbol{e} _ r + \Bigl (\frac{\partial}{\partial z} E_r - \frac{\partial}{\partial r} E _ z \Bigr ) \boldsymbol{e} _ \phi + \frac{1}{r} \Bigl (\frac{\partial}{\partial r} (r E_\phi) - \frac{\partial}{\partial \phi} E _ r \Bigr )\boldsymbol{e} _ z
-\]</div>
-<p>となりますが今は</p>
-<div class="math notranslate nohighlight">
-\[
-E _ r = E _ z = 0
-\]</div>
-<p>より</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \times \boldsymbol{E} = - \frac{\partial}{\partial z} E _ \phi \boldsymbol{e} _ r + \frac{1}{r} \frac{\partial}{\partial r} (r E_\phi) \boldsymbol{e} _ z
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-\nabla \times (\nabla \times \boldsymbol{E})
-&amp;=
-\frac{1}{r} \frac{\partial}{\partial \phi} \Bigl ( \frac{1}{r} \frac{\partial}{\partial r} (r E _ \phi) \Bigr ) \boldsymbol{e}_r - \Bigl ( \frac{\partial ^2}{\partial z ^2} E _ \phi + \frac{\partial}{\partial r} \Bigl ( \frac{1}{r} \frac{\partial}{\partial r} (r E _ \phi) \Bigr ) \Bigr ) \boldsymbol{e} _ \phi \newline
-&amp;=
--\Bigl ( \frac{\partial ^2}{\partial z ^2} E _ \phi + \frac{\partial}{\partial r} \Bigl ( \frac{1}{r} \frac{\partial}{\partial r} (r E _ \phi) \Bigr ) \Bigr ) \boldsymbol{e} _ \phi \newline
-\end{aligned}
-\]</div>
-<p>※ <span class="math notranslate nohighlight">\(E _ \phi\)</span> は <span class="math notranslate nohighlight">\(\phi\)</span> を含まないので第1項はゼロ</p>
-<p>いったん整理すると</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\nabla \times \nabla \times \boldsymbol{E} -k^2 \boldsymbol{E} &amp;= 0 \\
--\frac{\partial ^2}{\partial z ^2} E_\phi -\frac{\partial}{\partial r} \Bigl ( \frac{1}{r} \frac{\partial}{\partial r} (r E_\phi) \Bigr ) -k^2 E_\phi &amp;= 0 \\
-\end{aligned}
-\end{split}\]</div>
-<p>となります.これを計算すれば</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Bigl ( -\frac{\partial ^2 U}{\partial z ^2} -2ik \frac{\partial U}{\partial z} +k^2 U +\frac{1}{r^2} U -\frac{1}{r} \frac{\partial U}{\partial r} -\frac{\partial ^2 U}{\partial r ^2} -k^2 U \Bigr ) e^{ikz} &amp;= 0 \\
--\frac{\partial ^2 U}{\partial z ^2} -2ik \frac{\partial U}{\partial z} +\frac{1}{r^2} U -\frac{1}{r} \frac{\partial}{\partial r} \Bigl ( r \frac{\partial U}{\partial r} \Bigl ) &amp;= 0 \\
-\therefore \quad \frac{1}{r} \frac{\partial}{\partial r} \Bigl ( r \frac{\partial U}{\partial r} \Bigl ) -\frac{1}{r^2} U +2ik \frac{\partial U}{\partial z} +\frac{\partial ^2 U}{\partial z ^2} &amp;= 0
-\end{aligned}
-\end{split}\]</div>
-<p>を得ます.例によって近軸近似をすると左辺第4項はゼロになるので</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{1}{r} \frac{\partial}{\partial r} \Bigl ( r \frac{\partial U}{\partial r} \Bigl ) - \frac{1}{r^2} U + 2ik \frac{\partial U}{\partial z} = 0
-\]</div>
-<p>を得ます.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -602,11 +415,10 @@ E _ r = E _ z = 0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">ヘルムホルツ方程式</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">スカラー場</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ベクトル場</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">マクスウェル方程式</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radially-polarized-beam">径方向偏光（Radially Polarized Beam）</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
