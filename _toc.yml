@@ -1,7 +1,8 @@
 format: jb-book
 root: index
 chapters:
-  - file: math
-  - file: physics
-  - file: simulation
   - file: notes/optics
+    sections:
+      - file: math  # 数学の下に一段下がって表示される
+      - file: physics
+  - file: simulation
