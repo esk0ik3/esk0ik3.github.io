@@ -172,6 +172,9 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="math.html">数学について</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">物理について</a></li>
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">三角関数のグラフ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes/optics.html">光学について</a></li>
 </ul>
@@ -322,10 +325,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">マクスウェル方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radially-polarized-beam">径方向偏光（Radially Polarized Beam）</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">物理について</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">マクスウェル方程式</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#radially-polarized-beam">径方向偏光（Radially Polarized Beam）</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -336,16 +341,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+  <section id="id1">
 <h1>物理について<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>ここでは物理学に関するトピック、特に光学についてまとめています。</p>
+</section>
 <section id="id2">
-<h2>マクスウェル方程式<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h1>マクスウェル方程式<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
 <p>文中に数式を入れる場合は、シングルドル記号で囲みます。
 例えば、電磁波の基本となるのはマクスウェル方程式 <span class="math notranslate nohighlight">\(\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}\)</span> です。</p>
 </section>
 <section id="radially-polarized-beam">
-<h2>径方向偏光（Radially Polarized Beam）<a class="headerlink" href="#radially-polarized-beam" title="Permalink to this heading">#</a></h2>
+<h1>径方向偏光（Radially Polarized Beam）<a class="headerlink" href="#radially-polarized-beam" title="Permalink to this heading">#</a></h1>
 <p>独立した行で数式を表示したい場合は、ダブルドル記号 <code class="docutils literal notranslate"><span class="pre">$$</span></code> で囲みます。</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -354,13 +360,12 @@ document.write(`
 <p>このように行列を使って偏光状態を記述することも可能です。</p>
 </section>
 <section id="id3">
-<h2>フーリエ変換<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<h1>フーリエ変換<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
 <p>光学シミュレーションで頻繁に使用する2次元フーリエ変換の定義は以下の通りです。</p>
 <div class="math notranslate nohighlight">
 \[
 G(f_x, f_y) = \iint_{-\infty}^{\infty} g(x, y) e^{-j 2\pi (f_x x + f_y y)} dx dy
 \]</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -427,10 +432,12 @@ G(f_x, f_y) = \iint_{-\infty}^{\infty} g(x, y) e^{-j 2\pi (f_x x + f_y y)} dx dy
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">マクスウェル方程式</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radially-polarized-beam">径方向偏光（Radially Polarized Beam）</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">物理について</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">マクスウェル方程式</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#radially-polarized-beam">径方向偏光（Radially Polarized Beam）</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フーリエ変換</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>
