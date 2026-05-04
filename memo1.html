@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ジョーンズベクトルと偏光素子の解説</title>
+    <title>ジョーンズベクトルと偏光素子の解説 - ベクトルビーム研究</title>
     
     <!-- MathJax for LaTeX rendering -->
     <script>
@@ -21,210 +21,403 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             line-height: 1.8;
             color: #333;
-            max-width: 900px;
-            margin: 0 auto;
+            background: #f5f7fa;
+        }
+
+        /* ヘッダー（トップページと統一） */
+        header {
+            background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+            color: white;
             padding: 40px 20px;
-            background-color: #fcfcfc;
-        }
-        h1 {
             text-align: center;
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* ナビゲーション */
+        nav.top-nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav.top-nav ul {
+            list-style: none;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav.top-nav a {
+            display: block;
+            padding: 15px 20px;
+            color: #2196F3;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav.top-nav a:hover {
+            background: #f5f7fa;
+            color: #1565C0;
+        }
+
+        /* ページレイアウト (目次 + メインコンテンツ) */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* サイドバー（目次） */
+        .sidebar {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 80px; /* ヘッダーの高さ分下げる */
+        }
+
+        .toc-title {
+            color: #1565C0;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 15px;
             padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
         }
-        h2 {
-            color: #004d99;
-            border-left: 6px solid #004d99;
-            padding-left: 15px;
-            margin-top: 50px;
-            background-color: #f0f7ff;
-        }
-        h3 {
-            color: #2e5902;
-            border-bottom: 1px solid #d1e0c3;
-            margin-top: 30px;
-        }
-        .toc {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-        }
+
         .toc ul {
             list-style: none;
-            padding-left: 20px;
+            padding-left: 0;
         }
+
+        .toc ul ul {
+            padding-left: 15px;
+            margin-top: 5px;
+        }
+
         .toc li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
+
         .toc a {
             text-decoration: none;
-            color: #0066cc;
+            color: #555;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+            display: block;
         }
+
         .toc a:hover {
-            text-decoration: underline;
+            color: #2196F3;
         }
+
+        /* メイン記事エリア */
+        .article-content {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 見出しデザイン */
+        .article-content h2 {
+            color: #1565C0;
+            font-size: 1.8em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-content h3 {
+            color: #2196F3;
+            font-size: 1.3em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #2196F3;
+        }
+
+        .article-content p {
+            margin-bottom: 1.8em;
+            color: #444;
+            font-size: 1.05em;
+        }
+
+        /* ノート（注釈）ブロック */
         .note {
-            background-color: #fff9db;
-            border-left: 5px solid #fab005;
-            padding: 15px;
-            margin: 20px 0;
+            background-color: #fffde7;
+            border-left: 5px solid #fbc02d;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+            color: #5c5c5c;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
-        .page-break {
-            margin: 40px 0;
-            border-top: 1px dashed #ccc;
+
+        .note strong {
+            color: #e65100;
         }
-        p {
-            margin-bottom: 1.5em;
+
+        /* リスト */
+        .article-content ul {
+            margin-bottom: 1.8em;
+            padding-left: 25px;
+            color: #444;
         }
+
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        /* インラインコード */
         code {
-            background: #eee;
-            padding: 2px 4px;
+            background: #f1f5f9;
+            color: #c62828;
+            padding: 2px 6px;
             border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+        }
+
+        /* 数式周りの余白調整 */
+        mjx-container[jax="CHTML"][display="true"] {
+            margin: 2em 0 !important;
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        /* レスポンシブ (スマホ対応) */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin: 20px auto;
+            }
+
+            .sidebar {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .article-content {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
 
-<h1>偏光の数学的記述と光学素子</h1>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-content">
+            <h1>ジョーンズベクトルと偏光素子</h1>
+        </div>
+    </header>
 
-<nav class="toc">
-    <strong>目次</strong>
-    <ul>
-        <li><a href="#ジョーンズベクトル">ジョーンズベクトル</a></li>
-        <li><a href="#ジョーンズベクトルの見方">ジョーンズベクトルの見方</a></li>
-        <li><a href="#直線偏光">直線偏光</a></li>
-        <li><a href="#円偏光">円偏光</a></li>
-        <li><a href="#ジョーンズ行列">ジョーンズ行列</a>
-            <ul>
-                <li><a href="#補足">補足（ユニタリー行列）</a></li>
-            </ul>
-        </li>
-        <li><a href="#12波長板">1/2波長板 (HWP)</a></li>
-        <li><a href="#14波長板">1/4波長板 (QWP)</a></li>
-        <li><a href="#直線偏光子">直線偏光子</a></li>
-        <li><a href="#具体的な使い道">具体的な使い道</a>
-            <ul>
-                <li><a href="#hwpをpbsの前に置く">HWPをPBSの前に置く</a></li>
-                <li><a href="#表から透過させたあとに裏から透過させる">表から透過させたあとに裏から透過させる</a></li>
-            </ul>
-        </li>
-        <li><a href="#slm">SLM (空間光変調素子)</a></li>
-    </ul>
-</nav>
+    <!-- トップナビゲーション（戻るボタン） -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">← トップページに戻る</a></li>
+        </ul>
+    </nav>
 
-<section id="ジョーンズベクトル">
-    <h2>ジョーンズベクトル</h2>
-    <p>電場を $x$ 軸(水平方向), $y$ 軸(垂直方向)に分けて考えてみます.</p>
-    <p>ベクトルで表すと</p>
-    $$ \vec{E} = \begin{bmatrix} E_{x0} e^{i\phi_x} \\ E_{y0} e^{i\phi_y} \end{bmatrix} \quad (1.1) $$
-    <p>と書けます.</p>
-    <p>これは1941年にアメリカの物理学者ジョーンズ(R. Clark Jones)によって考案されたもので <strong>ジョーンズベクトル</strong> と言い,上式のように書くことで偏光状態を <strong>複素ベクトル</strong> によって表すことができます. $x,y$ 成分の振幅や位相の違いによって色々な偏光状態が表されます.</p>
-    
-    <div class="note">
-        <strong>※全体にかかる振幅の大きさや位相は偏光の状態に影響しない</strong> ことに注意してください.
+    <div class="container">
+        <!-- 左側：追従する目次 (Sidebar) -->
+        <aside class="sidebar">
+            <div class="toc-title">📑 目次</div>
+            <nav class="toc">
+                <ul>
+                    <li><a href="#ジョーンズベクトル">ジョーンズベクトル</a></li>
+                    <li><a href="#ジョーンズベクトルの見方">ジョーンズベクトルの見方</a></li>
+                    <li><a href="#直線偏光">直線偏光</a></li>
+                    <li><a href="#円偏光">円偏光</a></li>
+                    <li><a href="#ジョーンズ行列">ジョーンズ行列</a>
+                        <ul>
+                            <li><a href="#補足">補足（ユニタリー行列）</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#HWP">1/2波長板 (HWP)</a></li>
+                    <li><a href="#QWP">1/4波長板 (QWP)</a></li>
+                    <li><a href="#直線偏光子">直線偏光子</a></li>
+                    <li><a href="#具体的な使い道">具体的な使い道</a>
+                        <ul>
+                            <li><a href="#hwpをpbsの前に置く">HWPをPBSの前に置く</a></li>
+                            <li><a href="#表から透過させたあとに裏から透過させる">表から透過させたあとに裏から透過させる</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#slm">SLM (空間光変調素子)</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 右側：メインコンテンツ -->
+        <main class="article-content">
+            <section id="ジョーンズベクトル">
+                <h2>ジョーンズベクトル</h2>
+                <p>電場を $x$ 軸(水平方向), $y$ 軸(垂直方向)に分けて考えてみます。</p>
+                <p>ベクトルで表すと</p>
+                $$ \vec{E} = \begin{bmatrix} E_{x0} e^{i\phi_x} \\ E_{y0} e^{i\phi_y} \end{bmatrix} \quad (1.1) $$
+                <p>と書けます。</p>
+                <p>これは1941年にアメリカの物理学者ジョーンズ(R. Clark Jones)によって考案されたもので <strong>ジョーンズベクトル</strong> と言い、上式のように書くことで偏光状態を <strong>複素ベクトル</strong> によって表すことができます。$x, y$ 成分の振幅や位相の違いによって色々な偏光状態が表されます。</p>
+                
+                <div class="note">
+                    <strong>※全体にかかる振幅の大きさや位相は偏光の状態に影響しない</strong> ことに注意してください。
+                </div>
+                
+                <ul>
+                    <li>全体にかかる振幅とは、例えば水平方向に振動している電場の振動の幅が変わるだけで水平であるという形は変わらない。</li>
+                    <li>全体にかかる位相とは、例えば水平方向に振動している電場をどの瞬間から観測するのかの違いであり物理的にはどちらも同じ電場を表している。</li>
+                </ul>
+                
+                <p>つまり $(1.1)$ 式は</p>
+                $$ \vec{E}=E_{x0} e^{i\phi_x} \begin{bmatrix} 1 \\ \frac{E_{y0}}{E_{x0}} e^{i(\phi_y-\phi_x)} \end{bmatrix} \propto \begin{bmatrix} 1 \\ a e^{i\delta} \end{bmatrix} $$
+                <ul>
+                    <li>$a = \frac{E_{y0}}{E_{x0}}$</li>
+                    <li>$\delta = \phi_y-\phi_x$</li>
+                </ul>
+                <p>としても <strong>同じ偏光状態</strong> を表しているということです。</p>
+            </section>
+
+            <section id="ジョーンズベクトルの見方">
+                <h2>ジョーンズベクトルの見方</h2>
+                <p>ジョーンズベクトルは複素ベクトルであるので成分だけで見るとどのような偏光状態を表しているかは一目ではわからないです。そこでこのベクトルが時間変化したときにどのような形になるかを考えます。時間変化を見たいので $e^{i\omega t}$ をかけます。</p>
+                $$ \vec{E}=e^{i\omega t} \begin{bmatrix} E_{x0} e^{i\phi_x} \\ E_{y0} e^{i\phi_y} \end{bmatrix} $$
+                <p>次にこのベクトルを実部と虚部に分けます。</p>
+                $$ \vec{E}= \begin{bmatrix} E_{x0}[\cos{\omega t}\cos{\phi_x}-\sin{\omega t}\sin{\phi_x}+i(\cos{\omega t}\sin{\phi_x}+\sin{\omega t}\cos{\phi_x})] \\ E_{y0}[\cos{\omega t}\cos{\phi_y}-\sin{\omega t}\sin{\phi_y}+i(\cos{\omega t}\sin{\phi_y}+\sin{\omega t}\cos{\phi_y})] \end{bmatrix} $$
+                <p>最後に実部をとり $t$ を変化させたときのベクトルの軌跡を見れば良いです。つまり</p>
+                $$ Re(\vec{E})= \begin{bmatrix} E_{x0}(\cos{\omega t}\cos{\phi_x}-\sin{\omega t}\sin{\phi_x}) \\ E_{y0}(\cos{\omega t}\cos{\phi_y}-\sin{\omega t}\sin{\phi_y}) \end{bmatrix} \quad (2.1) $$
+                <p>の軌跡を考えます。</p>
+                <p>波を複素数で表現するのは計算の簡略化のためだったので、最終的に実部（物理量）を取り出すのは理にかなっています。</p>
+            </section>
+
+            <section id="直線偏光">
+                <h2>直線偏光</h2>
+                <p>$(1.1)$ 式において $x,y$ 成分の位相が共に等しいとき、すなわち $\phi_y = \phi_x$ の場合を考えます。軌跡は</p>
+                $$ \begin{aligned} Re(\vec{E}) &= \cos{(\omega t+\phi_x)} \begin{bmatrix} E_{x0} \\ E_{y0} \end{bmatrix} \end{aligned} $$
+                <p>となります。$x, y$ 成分に位相差はないので振幅の比によって偏光の傾きが決まります。軌道は直線となるため、これを <strong>直線偏光</strong> と言います。</p>
+            </section>
+
+            <section id="円偏光">
+                <h2>円偏光</h2>
+                <p>振幅が等しく、位相差 $\delta = \phi_y - \phi_x = \pi/2$ の場合、実部は以下のようになります。</p>
+                $$ Re(\vec{E})= E_{x0} \begin{bmatrix} \cos{\omega t} \\ -\sin{\omega t} \end{bmatrix} $$
+                <p>この軌道は時計回りの円になるので、 <strong>右回り円偏光</strong> となります。ジョーンズベクトルでは以下のように表されます。</p>
+                $$ \vec{E} \propto \begin{bmatrix} 1 \\ i \end{bmatrix} $$
+                <p>逆に $\delta = -\pi/2$ の場合は <strong>左回り円偏光</strong> となり、ベクトルは以下の通りです。</p>
+                $$ \vec{E} \propto \begin{bmatrix} 1 \\ -i \end{bmatrix} $$
+            </section>
+
+            <section id="ジョーンズ行列">
+                <h2>ジョーンズ行列</h2>
+                <p>偏光状態の変換（波長板などの通過）は、ジョーンズベクトルへの行列演算として記述できます。この $2 \times 2$ 行列を <strong>ジョーンズ行列</strong> と言います。</p>
+                <p>進相軸(x)と遅相軸(y)を設定し、位相差 $\delta$ を与える一般的な回転行列は次のように表されます。</p>
+                $$ J = \begin{bmatrix} e^{i\delta} \sin^2{\theta} + \cos^2{\theta} & \sin{\theta} \cos{\theta} (1 - e^{i\delta}) \\ \sin{\theta} \cos{\theta} (1 - e^{i\delta}) & \sin^2{\theta} + e^{i\delta} \cos^2{\theta} \end{bmatrix} \quad (5.1) $$
+
+                <h3 id="補足">補足</h3>
+                <p>この行列のエルミート共役 $J^{\dagger}$ との積をとると単位行列になることから、損失のない偏光素子は <strong>ユニタリー行列</strong> で表されることが分かります。</p>
+            </section>
+
+            <section id="HWP">
+                <h2>1/2波長板 (HWP)</h2>
+                <p>位相差 $\delta = \pi$ を与える素子です。行列は以下のようになります。</p>
+                $$ J_{HWP(\theta)} = \begin{bmatrix} \cos{2\theta} & \sin{2\theta} \\ \sin{2\theta} & -\cos{2\theta} \end{bmatrix} $$
+                <p>$\theta = 0$ のときは $y$ 成分を反転させます。任意の直線偏光を入射させると、その偏光方向を $2\theta$ だけ回転させる働きを持ちます。</p>
+            </section>
+
+            <section id="QWP">
+                <h2>1/4波長板 (QWP)</h2>
+                <p>位相差 $\delta = \pi/2$ を与える素子です。</p>
+                $$ J_{QWP(\theta)} = \begin{bmatrix} 1 - i\cos{2\theta} & -i\sin{2\theta} \\ -i\sin{2\theta} & 1 + i\cos{2\theta} \end{bmatrix} \quad (\text{全体係数省略}) $$
+                <p>直線偏光を円偏光に、あるいは円偏光を直線偏光に変換するために多用されます。</p>
+            </section>
+
+            <section id="直線偏光子">
+                <h2>直線偏光子</h2>
+                <p>特定の方向の電場成分のみを透過させる素子です。</p>
+                $$ J_{LP(\theta)} = \begin{bmatrix} \cos^2{\theta} & \sin{\theta} \cos{\theta} \\ \sin{\theta} \cos{\theta} & \sin^2{\theta} \end{bmatrix} $$
+            </section>
+
+            <section id="具体的な使い道">
+                <h2>具体的な使い道</h2>
+                <h3 id="hwpをpbsの前に置く">HWPをPBSの前に置く</h3>
+                <p>偏光ビームスプリッター(PBS)の前にHWPを置くことで、透過・反射する光の強度比を自由に調節できます。HWPを $\theta$ 回転させると直線偏光が $2\theta$ 回転するため、PBSを通過する成分を任意に制御可能です。</p>
+                
+                <h3 id="表から透過させたあとに裏から透過させる">表から透過させたあとに裏から透過させる</h3>
+                <p>ミラー反射を挟んで同じ波長板を往復させる場合、HWPでは回転角に依存せず結果的に偏光状態を維持（x成分反転のみ）する性質など、複雑な光学系の解析にジョーンズ行列は非常に強力です。</p>
+            </section>
+
+            <section id="slm">
+                <h2>SLM (空間光変調素子)</h2>
+                <p>反射型SLM（x成分変調）のジョーンズ行列は次のように書けます。</p>
+                $$ J_{SLM}= \begin{bmatrix} -e^{i\delta(x, y)} & 0 \\ 0 & 1 \end{bmatrix} $$
+                <p>SLMは液晶の配向を利用して、1ピクセルごとに位相遅延量 $\delta(x, y)$ を制御できます。これは、 <strong>ピクセルごとに任意の厚さ（位相差）を持つ波長板が並んでいる状態</strong> と解釈でき、非常に高度な光波面・偏光制御を可能にします。</p>
+            </section>
+        </main>
     </div>
-    
-    <ul>
-        <li>全体にかかる振幅とは、例えば水平方向に振動している電場の振動の幅が変わるだけで水平であるという形は変わらない.</li>
-        <li>全体にかかる位相とは、例えば水平方向に振動している電場をどの瞬間から観測するのかの違いであり物理的にはどちらも同じ電場を表している.</li>
-    </ul>
-    
-    <p>つまり $(1.1)$ 式は</p>
-    $$ \vec{E}=E _ {x0} e^{i\phi _ x} \begin{bmatrix} 1 \\ \frac{E _ {y0}}{E _ {x0}} e^{i(\phi _ y-\phi _ x)} \end{bmatrix} \propto \begin{bmatrix} 1 \\ a e^{i\delta} \end{bmatrix} $$
-    <ul>
-        <li>$a = \frac{E _ {y0}}{E _ {x0}}$</li>
-        <li>$\delta = \phi _ y-\phi _ x$</li>
-    </ul>
-    <p>としても <strong>同じ偏光状態</strong> を表しているということです.</p>
-</section>
 
-<div class="page-break"></div>
-
-<section id="ジョーンズベクトルの見方">
-    <h2>ジョーンズベクトルの見方</h2>
-    <p>ジョーンズベクトルは複素ベクトルであるので成分だけで見るとどのような偏光状態を表しているかは一目ではわからないです.そこでこのベクトルが時間変化したときにどのような形になるかを考えます.時間変化を見たいので $e^{i\omega t}$ をかけます.</p>
-    $$ \vec{E}=e^{i\omega t} \begin{bmatrix} E_{x0} e^{i\phi_x} \\ E_{y0} e^{i\phi_y} \end{bmatrix} $$
-    <p>次にこのベクトルを実部と虚部に分けます.</p>
-    $$ \vec{E}= \begin{bmatrix} E_{x0}[\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}+i(\cos{\omega t}\sin{\phi _ x}+\sin{\omega t}\cos{\phi _ x})] \\ E_{y0}[\cos{\omega t}\cos{\phi _ y}-\sin{\omega t}\sin{\phi _ y}+i(\cos{\omega t}\sin{\phi _ y}+\sin{\omega t}\cos{\phi _ y})] \end{bmatrix} $$
-    <p>最後に実部をとり $t$ を変化させたときのベクトルの軌跡を見れば良いです.つまり</p>
-    $$ Re(\vec{E})= \begin{bmatrix} E_{x0}(\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}) \\ E_{y0}(\cos{\omega t}\cos{\phi _ y}-\sin{\omega t}\sin{\phi _ y}) \end{bmatrix} \quad (2.1) $$
-    <p>の軌跡を考えます.</p>
-    <p>波を複素数で表現するのは計算の簡略化のためだったので、最終的に実部（物理量）を取り出すのは理にかなっています.</p>
-</section>
-
-<section id="直線偏光">
-    <h2>直線偏光</h2>
-    <p>$(1.1)$ 式において $x,y$ 成分の位相が共に等しいとき、すなわち $\phi_y = \phi_x$ の場合を考えます.軌跡は</p>
-    $$ \begin{aligned} Re(\vec{E}) &= \cos{(\omega t+\phi _ x)} \begin{bmatrix} E_{x0} \\ E_{y0} \end{bmatrix} \end{aligned} $$
-    <p>となります.$x,y$ 成分に位相差はないので振幅の比によって偏光の傾きが決まります.軌道は直線となるため、これを <strong>直線偏光</strong> と言います.</p>
-</section>
-
-<section id="円偏光">
-    <h2>円偏光</h2>
-    <p>振幅が等しく、位相差 $\delta = \phi_y - \phi_x = \pi/2$ の場合、実部は以下のようになります.</p>
-    $$ Re(\vec{E})= E _ {x0} \begin{bmatrix} \cos{\omega t} \\ -\sin{\omega t} \end{bmatrix} $$
-    <p>この軌道は時計回りの円になるので、 <strong>右回り円偏光</strong> となります. ジョーンズベクトルでは以下のように表されます.</p>
-    $$ \vec{E} \propto \begin{bmatrix} 1 \\ i \end{bmatrix} $$
-    <p>逆に $\delta = -\pi/2$ の場合は <strong>左回り円偏光</strong> となり、ベクトルは以下の通りです.</p>
-    $$ \vec{E} \propto \begin{bmatrix} 1 \\ -i \end{bmatrix} $$
-</section>
-
-<section id="ジョーンズ行列">
-    <h2>ジョーンズ行列</h2>
-    <p>偏光状態の変換（波長板などの通過）は、ジョーンズベクトルへの行列演算として記述できます.この $2 \times 2$ 行列を <strong>ジョーンズ行列</strong> と言います.</p>
-    <p>進相軸(x)と遅相軸(y)を設定し、位相差 $\delta$ を与える一般的な回転行列は次のように表されます.</p>
-    $$ J = \begin{bmatrix} e^{i\delta} \sin^2{\theta} + \cos^2{\theta} & \sin{\theta} \cos{\theta} (1 - e^{i\delta}) \\ \sin{\theta} \cos{\theta} (1 - e^{i\delta}) & \sin^2{\theta} + e^{i\delta} \cos^2{\theta} \end{bmatrix} \quad (5.1) $$
-
-    <h3 id="補足">補足</h3>
-    <p>この行列のエルミート共役 $J^{\dagger}$ との積をとると単位行列になることから、損失のない偏光素子は <strong>ユニタリー行列</strong> で表されることが分かります.</p>
-</section>
-
-<section id="12波長板">
-    <h2>1/2波長板 (HWP)</h2>
-    <p>位相差 $\delta = \pi$ を与える素子です. 行列は以下のようになります.</p>
-    $$ J_{HWP(\theta)} = \begin{bmatrix} \cos{2\theta} & \sin{2\theta} \\ \sin{2\theta} & -\cos{2\theta} \end{bmatrix} $$
-    <p>$\theta = 0$ のときは $y$ 成分を反転させます. 任意の直線偏光を入射させると、その偏光方向を $2\theta$ だけ回転させる働きを持ちます.</p>
-</section>
-
-<section id="14波長板">
-    <h2>1/4波長板 (QWP)</h2>
-    <p>位相差 $\delta = \pi/2$ を与える素子です. </p>
-    $$ J_{QWP(\theta)} = \begin{bmatrix} 1 - i\cos{2\theta} & -i\sin{2\theta} \\ -i\sin{2\theta} & 1 + i\cos{2\theta} \end{bmatrix} \quad (\text{全体係数省略}) $$
-    <p>直線偏光を円偏光に、あるいは円偏光を直線偏光に変換するために多用されます.</p>
-</section>
-
-<section id="直線偏光子">
-    <h2>直線偏光子</h2>
-    <p>特定の方向の電場成分のみを透過させる素子です.</p>
-    $$ J_{LP(\theta)} = \begin{bmatrix} \cos^2{\theta} & \sin{\theta} \cos{\theta} \\ \sin{\theta} \cos{\theta} & \sin^2{\theta} \end{bmatrix} $$
-</section>
-
-<section id="具体的な使い道">
-    <h2>具体的な使い道</h2>
-    <h3 id="hwpをpbsの前に置く">HWPをPBSの前に置く</h3>
-    <p>偏光ビームスプリッター(PBS)の前にHWPを置くことで、透過・反射する光の強度比を自由に調節できます. HWPを $\theta$ 回転させると直線偏光が $2\theta$ 回転するため、PBSを通過する成分を任意に制御可能です.</p>
-    
-    <h3 id="表から透過させたあとに裏から透過させる">表から透過させたあとに裏から透過させる</h3>
-    <p>ミラー反射を挟んで同じ波長板を往復させる場合、HWPでは回転角に依存せず結果的に偏光状態を維持（x成分反転のみ）する性質など、複雑な光学系の解析にジョーンズ行列は非常に強力です.</p>
-</section>
-
-<section id="slm">
-    <h2>SLM (空間光変調素子)</h2>
-    <p>反射型SLM（x成分変調）のジョーンズ行列は次のように書けます.</p>
-    $$ J_{SLM}= \begin{bmatrix} -e^{i\delta(x, y)} & 0 \\ 0 & 1 \end{bmatrix} $$
-    <p>SLMは液晶の配向を利用して、1ピクセルごとに位相遅延量 $\delta(x, y)$ を制御できます. これは、 <strong>ピクセルごとに任意の厚さ（位相差）を持つ波長板が並んでいる状態</strong> と解釈でき、非常に高度な光波面・偏光制御を可能にします.</p>
-</section>
-
-<footer>
-    <div class="page-break"></div>
-    <p style="text-align: center; color: #999; font-size: 0.8em;">Generated for Educational Purposes - 2026</p>
-</footer>
+    <footer>
+        <p>Generated for Educational Purposes - 2026 | ベクトルビーム研究</p>
+    </footer>
 
 </body>
 </html>
