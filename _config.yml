@@ -3,10 +3,3 @@ author: "esk0ik3"
 logo: doughnut.bmp
 execute:
   execute_notebooks: off
-sphinx:
-  config:
-    language: ja
-    # 以下の設定を追加すると、検索窓のヒントテキストなどを調整できます
-    html_theme_options:
-      search_bar_text: "検索キーワードを入力..." # 検索窓に表示するプレースホルダー
-      search_bar_position: sidebar           # 検索窓をサイドバーに固定（既定値）
