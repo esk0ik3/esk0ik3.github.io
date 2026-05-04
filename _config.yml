@@ -1,13 +1,8 @@
-# Book settings
-title: "My Jupyter Book"
-author: "esk0ik3"
-language: "ja"
-logo: ""
+title: ベクトルビーム研究
+author: esk0ik3
+logo: "" # ロゴ画像があればパスを指定できます
 
-# HTML settings
 html:
-  favicon: ""
-  use_repository_button: true
-  use_issues_button: false
-  use_edit_page_button: false
-permalink: /posts/:title.html
+  use_repository_button: true # 右上にGitHubへのリンクボタンを自動生成
+  extra_css:
+    - _static/custom.css      # あなたのCSSを読み込む指示
