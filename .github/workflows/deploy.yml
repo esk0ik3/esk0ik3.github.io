@@ -1,13 +1,10 @@
 name: deploy-book
 
-# mainブランチにプッシュされた時にこのロボットが動きます
-# ※もしお使いのデフォルトブランチが「master」の場合は、下の main を master に書き換えてください
 on:
   push:
     branches:
       - main
 
-# ロボットにファイルの書き込み権限を与えます
 permissions:
   contents: write
 
@@ -15,26 +12,21 @@ jobs:
   deploy-book:
     runs-on: ubuntu-latest
     steps:
-    # 1. リポジトリのデータを読み込む
     - uses: actions/checkout@v4
 
-    # 2. Jupyter Bookを動かすためのPython環境を準備する
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
-    # 3. Jupyter Bookをインストールする
     - name: Install dependencies
       run: |
         pip install -U jupyter-book
 
-    # 4. あなたの素材を元に、美しいHTMLの本（サイト）を構築する
     - name: Build the book
       run: |
         jupyter-book build .
 
-    # 5. 完成したサイトを「gh-pages」という公開専用ブランチにアップロードする
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
