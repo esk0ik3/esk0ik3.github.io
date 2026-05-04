@@ -1,0 +1,8 @@
+# Table of contents for Jupyter Book
+format: jb-book
+root: intro
+chapters:
+  - file: intro
+    title: "自己紹介"
+  - file: research
+    title: "研究内容"
