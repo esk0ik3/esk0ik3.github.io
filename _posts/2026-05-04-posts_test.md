@@ -7,5 +7,5 @@ title: ジョーンズベクトルと偏光素子
 軌道は直線となるため、これを**直線偏光**と言います。
 
 $$
-\vec{E} \propto \begin{bmatrix} 1 \\ i \end{bmatrix}
+\vec{E} \propto \begin{bmatrix} 1 \\\\ i \end{bmatrix}
 $$
