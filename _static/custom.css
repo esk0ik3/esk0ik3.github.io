@@ -1,91 +1,80 @@
-/* --- Summer Breeze Theme --- */
+/* --- Summer Breeze Theme (Dark Mode Compatible) --- */
 
 :root {
-    /* 真夏の色彩設計 */
-    --pst-color-primary: #0077b6;         /* 深みのあるシーブルー */
-    --pst-color-background: #f0f9ff;      /* 澄み切った夏の空色（非常に薄い青） */
-    --pst-color-text-base: #1e293b;       /* 濡れた岩場のようなダークグレー */
-    --pst-color-info: #fbbf24;             /* 真夏の太陽光（イエロー） */
-    --pst-color-surface: #ffffff;
+    /* ライトモード（標準）の変数 */
+    --summer-bg: #f0f9ff;
+    --summer-main: #ffffff;
+    --summer-text: #1e293b;
+    --summer-primary: #0077b6;
+    --summer-accent: #fbbf24;
+    --summer-sidebar: rgba(255, 255, 255, 0.7);
+}
+
+/* ダークモード専用の設定 */
+html[data-theme="dark"] {
+    --summer-bg: #081b29;        /* 深夜の海のような深い紺 */
+    --summer-main: #102a43;      /* 少し明るいネイビー */
+    --summer-text: #e2e8f0;      /* 読みやすい薄いグレー */
+    --summer-primary: #00b4d8;    /* 夜に光る波のような水色 */
+    --summer-accent: #fcd34d;    /* 月明かりのようなイエロー */
+    --summer-sidebar: rgba(16, 42, 67, 0.8);
 }
 
 body {
-    background-color: var(--pst-color-background);
-    /* 遠くの波打ち際のような微かなグラデーション */
-    background-image: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
-    background-attachment: fixed;
+    background-color: var(--summer-bg);
+    background-image: linear-gradient(180deg, var(--summer-bg) 0%, var(--summer-bg) 100%);
+    color: var(--summer-text);
 }
 
-/* 記事エリア：白いリネンシャツのような清潔感 */
+/* 記事エリア：背景色を固定せず変数にする */
 .bd-main {
-    background: white !important;
+    background-color: var(--summer-main) !important;
     border-radius: 15px;
-    box-shadow: 0 10px 25px -5px rgba(0, 119, 182, 0.1);
-    border: 1px solid rgba(0, 119, 182, 0.05);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 119, 182, 0.2);
 }
 
-/* サイドバー：入道雲をイメージした柔らかい白 */
+/* サイドバー */
 .bd-sidebar {
-    background-color: rgba(255, 255, 255, 0.6) !important;
+    background-color: var(--summer-sidebar) !important;
     backdrop-filter: blur(8px);
-    border-right: 1px solid rgba(0, 119, 182, 0.1);
 }
 
-/* 見出し：光を反射する水面のような透明感 */
-h1, h2 {
-    color: var(--pst-color-primary) !important;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-}
-
-h1 {
-    position: relative;
-    padding-bottom: 0.5rem;
+/* 見出し */
+h1, h2, h3 {
+    color: var(--summer-primary) !important;
 }
 
 h1::after {
     content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, var(--pst-color-primary), var(--pst-color-info));
+    background: linear-gradient(90deg, var(--summer-primary), var(--summer-accent));
+    margin-top: 10px;
     border-radius: 2px;
 }
 
-/* リンク：夏の夕暮れのオレンジをアクセントに */
+/* 本文のテキストカラーを強制適用 */
+.bd-content, .bd-article p {
+    color: var(--summer-text) !important;
+}
+
+/* リンク */
 a {
-    color: var(--pst-color-primary) !important;
+    color: var(--summer-primary) !important;
     text-decoration: none;
-    border-bottom: 1px dashed var(--pst-color-primary);
-    transition: all 0.3s ease;
+    border-bottom: 1px dashed var(--summer-primary);
 }
 
 a:hover {
-    color: #f59e0b !important; /* オレンジに変化 */
-    border-bottom: 1px solid #f59e0b;
-    background-color: rgba(251, 191, 36, 0.1);
+    color: var(--summer-accent) !important;
+    border-bottom: 1px solid var(--summer-accent);
 }
 
-/* コードブロック：プールサイドのタイルのような質感 */
+/* コードブロック */
 div.highlight {
-    background-color: #f8fafc !important;
-    border: 1px solid #e2e8f0;
-    border-left: 5px solid var(--pst-color-primary);
-    border-radius: 8px;
-}
-
-/* テーブル：読みやすさを重視 */
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-th {
-    background-color: #f1f5f9;
-    color: var(--pst-color-primary);
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid var(--summer-primary);
+    border-left: 5px solid var(--summer-primary);
 }
