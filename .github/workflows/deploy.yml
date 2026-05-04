@@ -5,7 +5,6 @@ on:
     branches:
       - main
 
-# ロボットに書き込み権限を明示的に与える
 permissions:
   contents: write
 
@@ -26,16 +25,17 @@ jobs:
 
     - name: Build the book
       run: |
-        # コマンドが見つからないエラーを回避するため python -m で実行
+        # 本を組み立てる
         python -m jupyter_book build .
+        # 【デバッグ用】本当にファイルが作られたかログに表示させる
+        echo "--- 生成されたファイル一覧 ---"
+        ls -R _build/html
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        # Jupyter Bookが生成したHTMLがある場所を指定
         publish_dir: ./_build/html
-        # Jekyllを無効化するファイルを自動生成
-        nojekyll: true 
+        # peaceiris版はデフォルトで .nojekyll を作るので、設定は不要です
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
