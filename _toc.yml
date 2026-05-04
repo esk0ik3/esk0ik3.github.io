@@ -1,4 +1,4 @@
 format: jb-book
-root: index.md
+root: index
 chapters:
-  - file: 20260504_memo1.md
+  - file: 20260504_memo1
