@@ -1,0 +1,16 @@
+/* 全体のメインカラー（リンクやボタンの色）を変える */
+:root {
+    --pst-color-primary: #004d99;      /* 濃い青色（光学・誠実なイメージ） */
+    --pst-color-info: #0073e6;
+}
+
+/* サイドバーの背景色を少し変える */
+.bd-sidebar {
+    background-color: #f8f9fa;
+}
+
+/* 記事内の見出し（H1, H2）の色を変える */
+h1, h2 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+}
