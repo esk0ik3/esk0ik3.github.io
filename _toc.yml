@@ -7,3 +7,13 @@ parts:
   chapters:
   - file: vector_beam/markdown/thesis
   - file: vector_beam/markdown/jones_vector_matrix
+- caption: 数学
+  numbered: true
+  chapters:
+  - file: vector_beam/markdown/thesis
+  - file: vector_beam/markdown/jones_vector_matrix
+  - caption: 物理
+  numbered: true
+  chapters:
+  - file: vector_beam/markdown/thesis
+  - file: vector_beam/markdown/jones_vector_matrix
