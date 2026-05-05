@@ -1,8 +1,5 @@
 format: jb-book
 root: home
 
-parts:
-- caption: 第１章
-  numbered: true
-  chapters:
-    - file: 001_reference/markdown/thesis
+chapters:
+  - file: 001_reference/markdown/thesis
