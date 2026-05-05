@@ -5,7 +5,4 @@ parts:
 - caption: 第１章
   numbered: true
   chapters:
-    - file: physics
-      # title: 物理学
-    - file: simulation.ipynb
-      # title: 光学シミュレーション
+    - file: 000_home/markdown/home
