@@ -1,5 +1,5 @@
 format: jb-book
-root: 000_home/markdown/home
+root: home
 
 parts:
 - caption: 第１章
