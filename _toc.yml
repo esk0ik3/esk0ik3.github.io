@@ -1,5 +1,5 @@
 format: jb-book
-root: index
+root: home
 
 parts:
 - caption: 第１章
