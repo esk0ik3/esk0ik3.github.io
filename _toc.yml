@@ -5,4 +5,4 @@ parts:
 - caption: 第１章
   numbered: true
   chapters:
-    - file: 000_home/markdown/home
+    - file: 001_reference/markdown/thesis
