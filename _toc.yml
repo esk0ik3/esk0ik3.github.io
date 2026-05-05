@@ -6,4 +6,6 @@ parts:
   numbered: true
   chapters:
     - file: physics
+      title: 物理学
     - file: simulation.ipynb
+      title: 光学シミュレーション
