@@ -3,15 +3,15 @@ root: home
 
 parts: 
 - caption: ベクトルビーム
-  numbered: true
+  numbered: false
   chapters:
   - file: vector_beam/markdown/thesis
   - file: vector_beam/markdown/jones_vector_matrix
 - caption: 数学
-  numbered: true
+  numbered: false
   chapters:
   - file: math/markdown/fourier_transformation
 - caption: 物理
-  numbered: true
+  numbered: false
   chapters:
   - file: physics/markdown/reflection
