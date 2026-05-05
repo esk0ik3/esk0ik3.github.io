@@ -1,5 +1,5 @@
 format: jb-book
-root: home
+root: 000_home/markdown/index
 
 chapters:
   - file: 001_reference/markdown/thesis
