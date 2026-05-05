@@ -1,5 +1,9 @@
 format: jb-book
 root: home
 
-chapters:
-  - file: 001_reference/markdown/thesis
+parts: 
+- caption: ベクトルビーム
+  numbered: true
+  chapters:
+  - file: vector_beam/thesis
+  - file: vector_beam/jones_vector_matrix
