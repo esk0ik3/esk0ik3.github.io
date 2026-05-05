@@ -6,5 +6,5 @@ parts:
 - caption: 第１章
   numbered: true
   chapters:
-  - file: physics
-  - file: simulation.ipynb
+    - file: physics
+    - file: simulation.ipynb
