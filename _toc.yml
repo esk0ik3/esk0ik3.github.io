@@ -10,10 +10,8 @@ parts:
 - caption: 数学
   numbered: true
   chapters:
-  - file: vector_beam/markdown/thesis
-  - file: vector_beam/markdown/jones_vector_matrix
+  - file: math/markdown/fourier_transformation
 - caption: 物理
   numbered: true
   chapters:
-  - file: vector_beam/markdown/thesis
-  - file: vector_beam/markdown/jones_vector_matrix
+  - file: physics/markdown/reflection
