@@ -1,6 +1,5 @@
 format: jb-book
 root: index
-title: ホームに戻る
 
 parts:
 - caption: 第１章
