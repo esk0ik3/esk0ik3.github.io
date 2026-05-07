@@ -1,23 +1,30 @@
 format: jb-book
 root: home
 
-parts: 
-- caption: ベクトルビーム
-  numbered: false
-  chapters:
-  - file: vector_beam/markdown/textbook
-  - file: vector_beam/markdown/thesis
-  - file: vector_beam/markdown/jones_vector
-  - file: vector_beam/markdown/jones_matrix
-- caption: 数学
-  numbered: false
-  chapters:
-  - file: math/markdown/fourier_transformation
-- caption: 物理
-  numbered: false
-  chapters:
-  - file: physics/markdown/reflection
-- caption: 情報
-  numbered: false
-  chapters:
-  - file: informatics/markdown/gs_algorithm
+parts:
+  # --- ベクトルビーム ---
+  - chapters:
+      - title: ベクトルビーム             # 文字をクリックするとメニューが開閉します
+        sections:
+          - file: vector_beam/markdown/textbook
+          - file: vector_beam/markdown/thesis
+          - file: vector_beam/markdown/jones_vector
+          - file: vector_beam/markdown/jones_matrix
+
+  # --- 数学 ---
+  - chapters:
+      - title: 数学
+        sections:
+          - file: math/markdown/fourier_transformation
+
+  # --- 物理 ---
+  - chapters:
+      - title: 物理
+        sections:
+          - file: physics/markdown/reflection
+
+  # --- 情報 ---
+  - chapters:
+      - title: 情報
+        sections:
+          - file: informatics/markdown/gs_algorithm
