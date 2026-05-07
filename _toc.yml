@@ -15,3 +15,7 @@ parts:
   numbered: false
   chapters:
   - file: physics/markdown/reflection
+- caption: 情報
+  numbered: false
+  chapters:
+  - file: informatics/markdown/gs_algorithm
