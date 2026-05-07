@@ -7,6 +7,8 @@ parts:
   chapters:
   - file: vector_beam/markdown/textbook
   - file: vector_beam/markdown/thesis
+  - file: vector_beam/markdown/jones_vector
+  - file: vector_beam/markdown/jones_matrix
 - caption: 数学
   numbered: false
   chapters:
