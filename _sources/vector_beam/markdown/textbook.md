@@ -2,9 +2,7 @@
 
 ここでは，ベクトルビームを理解するにあたって参考にした教科書を紹介します．
 
-## 例題で学ぶ光学入門-谷田貝豊彦(2010)
-
-[リンク](https://www.morikita.co.jp/books/mid/015441)
+## [例題で学ぶ光学入門-谷田貝豊彦(2010)](https://www.morikita.co.jp/books/mid/015441)
 
 定価:¥2,860
 
@@ -23,9 +21,7 @@
 - 第9章 物質と光
 - 第10章 色と明るさ
 
-## はじめての光学-川田善正(2014)
-
-[リンク](https://www.kspub.co.jp/book/detail/1532878.html)
+## [はじめての光学-川田善正(2014)](https://www.kspub.co.jp/book/detail/1532878.html)
 
 定価:¥3,300
 
@@ -46,9 +42,7 @@
 - 付録C 集光スポットのベクトル成分
 - 付録D 多層膜からの反射率の計算
 
-## 光学-谷田貝豊彦(2017)
-
-[リンク](https://www.asakura.co.jp/detail.php?book_code=13121)
+## [光学-谷田貝豊彦(2017)](https://www.asakura.co.jp/detail.php?book_code=13121)
 
 定価:¥7,040
 
