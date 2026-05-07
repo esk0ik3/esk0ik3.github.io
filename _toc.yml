@@ -4,7 +4,8 @@ root: home
 parts:
   # --- ベクトルビーム ---
   - chapters:
-      - title: ベクトルビーム             # 文字をクリックするとメニューが開閉します
+      - file: vector_beam/index           # ベクトルビームの概要ページ
+        title: ベクトルビーム
         sections:
           - file: vector_beam/markdown/textbook
           - file: vector_beam/markdown/thesis
@@ -13,18 +14,21 @@ parts:
 
   # --- 数学 ---
   - chapters:
-      - title: 数学
+      - file: math/index                  # 数学の概要ページ
+        title: 数学
         sections:
           - file: math/markdown/fourier_transformation
 
   # --- 物理 ---
   - chapters:
-      - title: 物理
+      - file: physics/index               # 物理の概要ページ
+        title: 物理
         sections:
           - file: physics/markdown/reflection
 
   # --- 情報 ---
   - chapters:
-      - title: 情報
+      - file: informatics/index           # 情報の概要ページ
+        title: 情報
         sections:
           - file: informatics/markdown/gs_algorithm
