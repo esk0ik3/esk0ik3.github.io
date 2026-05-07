@@ -6,15 +6,11 @@
 
 以下の3つが分かりやすかったです．
 
-### Cylindrical vector beams: from mathematical concepts to applications(2009)
+- Cylindrical vector beams: from mathematical concepts to applications(2009)
 [リンク](https://opg.optica.org/aop/fulltext.cfm?uri=aop-1-1-1)
 
-### Vector Beams for Fundamental Physics and Applications(2016)
+- Vector Beams for Fundamental Physics and Applications(2016)
 [リンク](https://academicworks.cuny.edu/gc_etds/1267/)
 
-### Vectorial optical fields: recent advances and future prospects(2017)
+- Vectorial optical fields: recent advances and future prospects(2017)
 [リンク](https://www.sciencedirect.com/science/article/abs/pii/S2095927317306333)
-
-[リンク]()
-
-[リンク]()
