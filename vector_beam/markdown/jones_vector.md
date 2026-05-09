@@ -29,7 +29,7 @@ $$
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/radial.png" 
        style="width: 30%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-  <p style="margin-top: 10px; font-size: 1.0em;">偏光状態</p>
+  <p style="margin-top: 10px; font-size: 0.8em;">偏光状態</p>
 </div>
 
 のような偏光状態を表していることが分かります．以下に，有名なベクトルビームの例を示します．
@@ -39,31 +39,31 @@ $$
   <div style="text-align: center; width: 30%;">
     <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/lemon.png" 
          style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 1.0em;">レモン</p>
+    <p style="margin-top: 10px; font-size: 0.8em;">レモン</p>
   </div>
 
   <div style="text-align: center; width: 30%;">
     <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/monstar.png" 
          style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 1.0em;">スター</p>
+    <p style="margin-top: 10px; font-size: 0.8em;">スター</p>
   </div>
 
   <div style="text-align: center; width: 30%;">
     <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/star.png" 
          style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 1.0em;">モンスター</p>
+    <p style="margin-top: 10px; font-size: 0.8em;">モンスター</p>
   </div>
 
   <div style="text-align: center; width: 30%;">
     <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/radial.png" 
          style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 1.0em;">ラジアル</p>
+    <p style="margin-top: 10px; font-size: 0.8em;">ラジアル</p>
   </div>
 
   <div style="text-align: center; width: 30%;">
     <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/azimuthal.png" 
          style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 1.0em;">アジマス</p>
+    <p style="margin-top: 10px; font-size: 0.8em;">アジマス</p>
   </div>
 
 </div>
