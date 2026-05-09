@@ -5,5 +5,8 @@
 例えば方位角:$\varphi$に依存するような，以下のようなジョーンズベクトル
 
 $$
-
+\begin{bmatrix}
+\cos{\varphi} \newline
+\sin{\varphi}
+\end{bmatrix}
 $$
