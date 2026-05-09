@@ -12,7 +12,7 @@ $$
 \end{bmatrix}
 $$
 
-を考えます.これは，例えば$\varphi=0(rad)$の位置では
+を考えます.これは，例えば$\varphi=0$ radの位置では
 
 $$
 \mathbf{J}(0)=
