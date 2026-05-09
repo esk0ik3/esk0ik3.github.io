@@ -25,5 +25,5 @@ $$
 となり，p偏光であることが分かります．このように考えると，このジョーンズ行列が表している偏光状態は以下のような分布になっています．い
 
 <div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/markdown/fig/radial.png" style="width: 10%;">
+  <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/markdown/fig/radial.png" style="width: 30%;">
 </div>
