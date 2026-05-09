@@ -354,14 +354,25 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>ジョーンズベクトル<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>光が完全偏光であると仮定して，その偏光状態をジョーンズベクトルによって定式化します．ただし，ベクトルビームは断面内で空間的な偏光不均一性を持つため，ジョーンズベクトルを位置の関数として定義することで，その特性を表現します．</p>
-<p>例えば方位角:<span class="math notranslate nohighlight">\(\varphi\)</span>に依存するような，以下のようなジョーンズベクトル</p>
+<p>ここで，方位角:<span class="math notranslate nohighlight">\(\varphi\)</span>に依存するような，以下のようなジョーンズベクトル</p>
 <div class="math notranslate nohighlight">
 \[
+\mathbf{J(\varphi)}=
 \begin{bmatrix}
 \cos{\varphi} \newline
 \sin{\varphi}
 \end{bmatrix}
 \]</div>
+<p>を考えます.これは，例えば<span class="math notranslate nohighlight">\(\varphi=0(rad)\)</span>の位置では</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{J(0)}=
+\begin{bmatrix}
+1 \newline
+0
+\end{bmatrix}
+\]</div>
+<p>となり，p偏光であることが分かります．このように考えると，このジョーンズ行列が表している偏光状態は以下のような分布になっています．</p>
 </section>
 
     <script type="text/x-thebe-config">
