@@ -36,7 +36,7 @@ $$
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/lemon_monstar_star.png" 
-       style="width: 70%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
+       style="width: 65%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
   <p style="margin-top: 10px; font-size: 0.8em;">偏光状態</p>
 </div>
 
@@ -46,40 +46,3 @@ $$
   <p style="margin-top: 10px; font-size: 0.8em;">偏光状態</p>
 </div>
 
-<div style="display: flex; justify-content: center; gap: 20px; align-items: flex-start;">
-  
-  <div style="text-align: center; width: 30%;">
-    <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/lemon.png" 
-         style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 0.8em;">レモン</p>
-  </div>
-
-  <div style="text-align: center; width: 30%;">
-    <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/monstar.png" 
-         style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 0.8em;">スター</p>
-  </div>
-
-  <div style="text-align: center; width: 30%;">
-    <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/star.png" 
-         style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 0.8em;">モンスター</p>
-  </div>
-
-</div>
-
-<div style="display: flex; justify-content: center; gap: 20px; align-items: flex-start;">
-
-  <div style="text-align: center; width: 30%;">
-    <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/radial.png" 
-         style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 0.8em;">ラジアル</p>
-  </div>
-
-  <div style="text-align: center; width: 30%;">
-    <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/azimuthal.png" 
-         style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
-    <p style="margin-top: 10px; font-size: 0.8em;">アジマス</p>
-  </div>
-
-</div>
