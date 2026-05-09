@@ -27,3 +27,11 @@ $$
 ![画像](./fig/radial.png)
 
 <img src="./fig/radial.png" style="display: block; margin: 0 auto;">
+
+<p style="text-align: center;">
+  <img src="./fig/radial.png">
+</p>
+
+![画像](./fig/radial.png){: style="display:block; margin:0 auto;"}
+
+![画像](./fig/radial.png){: .center}
