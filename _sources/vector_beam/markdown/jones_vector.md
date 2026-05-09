@@ -7,32 +7,21 @@
 $$
 \mathbf{J}(\varphi)=
 \begin{bmatrix}
-\cos{\varphi} \newline
-\sin{\varphi}
+f(r, \varphi) \newline
+g(r, \varphi)
 \end{bmatrix}
 \tag{1}
 $$
 
-を考えます.これは，例えば$\, \varphi=0 \, rad \, $の位置では
-
-$$
-\mathbf{J}(0)=
-\begin{bmatrix}
-1 \newline
-0
-\end{bmatrix}
-\tag{2}
-$$
-
-ですのでp偏光となります．このように考えると，式$\, (1) \,$のジョーンズベクトルは
+を考えます.このように書くことで，例えば以下のような偏光状態を表現することができます．
 
 <div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/radial.png" 
+  <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/random.png" 
        style="width: 30%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
   <p style="margin-top: 10px; font-size: 0.8em;">偏光状態</p>
 </div>
 
-のような偏光状態を表していることが分かります．以下に，有名なベクトルビームの例を示します．
+以下に，有名なベクトルビームの例を示します．
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/lemon_monstar_star.png" 
