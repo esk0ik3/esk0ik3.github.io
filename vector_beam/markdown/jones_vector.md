@@ -2,7 +2,7 @@
 
 光が完全偏光であると仮定して，その偏光状態をジョーンズベクトルによって定式化します．ただし，ベクトルビームは断面内で空間的な偏光不均一性を持つため，ジョーンズベクトルを位置の関数として定義することで，その特性を表現します．
 
-ここで，方位角:$\varphi$に依存するような，以下のようなジョーンズベクトル
+ここで，方位角$\, \varphi \,$に依存するような，以下のようなジョーンズベクトル
 
 $$
 \mathbf{J}(\varphi)=
@@ -12,7 +12,7 @@ $$
 \end{bmatrix}
 $$
 
-を考えます.これは，例えば$\varphi=0 \: rad \: $の位置では
+を考えます.これは，例えば$\, \varphi=0 \, rad \, $の位置では
 
 $$
 \mathbf{J}(0)=
@@ -29,13 +29,3 @@ $$
        style="width: 30%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
   <p style="margin-top: 10px; font-size: 1.0em;">偏光状態</p>
 </div>
-
-$1m$は$100cm$です
-
-$1m \ $は$100cm \ $です
-
-$1 \ m \ $は$100 \ cm \ $です
-
-$1 \: m \: $は$100 \: cm \: $です
-
-$1 \, m \, $は$100 \, cm \, $です
