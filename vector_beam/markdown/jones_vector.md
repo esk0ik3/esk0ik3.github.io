@@ -29,3 +29,7 @@ $$
        style="width: 30%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
   <p style="margin-top: 10px; font-size: 1.0em;">偏光状態</p>
 </div>
+
+$1m$は$100cm$です
+$1m \ $は$100cm \ $です
+$1 \ m \ $は$100 \ cm \ $です
