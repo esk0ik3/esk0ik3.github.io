@@ -5,7 +5,7 @@
 ここで，方位角:$\varphi$に依存するような，以下のようなジョーンズベクトル
 
 $$
-\mathbf{J(\varphi)}=
+\mathbf{J}(\varphi)=
 \begin{bmatrix}
 \cos{\varphi} \newline
 \sin{\varphi}
@@ -15,7 +15,7 @@ $$
 を考えます.これは，例えば$\varphi=0(rad)$の位置では
 
 $$
-\mathbf{J(0)}=
+\mathbf{J}(0)=
 \begin{bmatrix}
 1 \newline
 0
