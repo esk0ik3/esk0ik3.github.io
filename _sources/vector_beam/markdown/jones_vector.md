@@ -24,21 +24,14 @@ $$
 
 となり，p偏光であることが分かります．このように考えると，このジョーンズ行列が表している偏光状態は以下のような分布になっています．い
 
-<!-- 1. 標準Markdown（サイズ指定不可のためそのまま） -->
-![画像](./fig/radial.png)
+![画像](./fig/radial.png){fig-align="center" width="10%"}
 
-<!-- 2. HTMLタグ（前後に必ず空行を入れる） -->
+前の文章
 
-<img src="./fig/radial.png" style="display: block; margin: 0 auto; width: 10%;">
 
-<!-- 3. pタグ囲み（前後に必ず空行を入れる） -->
-
-<p style="text-align: center;">
+<div style="text-align: center;">
   <img src="./fig/radial.png" style="width: 10%;">
-</p>
+</div>
 
-<!-- 4. Kramdownスタイル（ ) と { の間に必ずスペースを入れる） -->
-![画像](./fig/radial.png) {: style="display:block; margin:0 auto; width: 10%;"}
 
-<!-- 5. Kramdownクラス（ ) と { の間に必ずスペースを入れる） -->
-![画像](./fig/radial.png) {: .center width="10%"}
+後の文章

@@ -373,18 +373,12 @@ document.write(`
 \end{bmatrix}
 \]</div>
 <p>となり，p偏光であることが分かります．このように考えると，このジョーンズ行列が表している偏光状態は以下のような分布になっています．い</p>
-<!-- 1. 標準Markdown（サイズ指定不可のためそのまま） -->
-<p><img alt="画像" src="../../_images/radial.png" /></p>
-<!-- 2. HTMLタグ（前後に必ず空行を入れる） -->
-<img src="./fig/radial.png" style="display: block; margin: 0 auto; width: 10%;">
-<!-- 3. pタグ囲み（前後に必ず空行を入れる） -->
-<p style="text-align: center;">
+<p><img alt="画像" src="../../_images/radial.png" />{fig-align=”center” width=”10%”}</p>
+<p>前の文章</p>
+<div style="text-align: center;">
   <img src="./fig/radial.png" style="width: 10%;">
-</p>
-<!-- 4. Kramdownスタイル（ ) と { の間に必ずスペースを入れる） -->
-<p><img alt="画像" src="../../_images/radial.png" /> {: style=”display:block; margin:0 auto; width: 10%;”}</p>
-<!-- 5. Kramdownクラス（ ) と { の間に必ずスペースを入れる） -->
-<p><img alt="画像" src="../../_images/radial.png" /> {: .center width=”10%”}</p>
+</div>
+<p>後の文章</p>
 </section>
 
     <script type="text/x-thebe-config">
