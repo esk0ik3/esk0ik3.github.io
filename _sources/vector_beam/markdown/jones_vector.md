@@ -26,6 +26,6 @@ $$
 
 ![画像](./fig/radial.png)
 
-<div align="center">
-  <img src="./fig/radial.png" width="300">
-</div>
+<center>
+  <img src="./fig/radial.png">
+</center>
