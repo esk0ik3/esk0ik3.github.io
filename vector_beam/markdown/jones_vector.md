@@ -26,4 +26,5 @@ $$
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/radial.png" style="width: 30%;">
+  <figcaption style="font-size: 0.9em; color: #555;">偏光状態</figcaption>
 </div>
