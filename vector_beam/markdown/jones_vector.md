@@ -24,14 +24,12 @@ $$
 
 となり，p偏光であることが分かります．このように考えると，このジョーンズ行列が表している偏光状態は以下のような分布になっています．い
 
-![画像](./fig/radial.png)
-
-<img src="./fig/radial.png" style="display: block; margin: 0 auto;">
+<img src="./fig/radial.png" style="display: block; margin: 0 auto; width: 10%;">
 
 <p style="text-align: center;">
-  <img src="./fig/radial.png">
+  <img src="./fig/radial.png" width="10%">
 </p>
 
-![画像](./fig/radial.png){: style="display:block; margin:0 auto;"}
+![画像](./fig/radial.png){: style="display:block; margin:0 auto; width: 10%;"}
 
-![画像](./fig/radial.png){: .center}
+![画像](./fig/radial.png){: .center width="10%"}
