@@ -5,7 +5,7 @@
 ビームは円形であることが多いため，極座標系で位置を表現したほうが分かりやすいです．そこで，径成分$\, r \,$，方位角$\, \varphi \,$を用いてベクトルビームのジョーンズベクトルは
 
 $$
-\mathbf{J}(\varphi)=
+\mathbf{J}(r, \varphi)=
 \begin{bmatrix}
 f(r, \varphi) \newline
 g(r, \varphi)
@@ -19,7 +19,7 @@ $$
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/lemon_monstar_star.png" 
-       style="width: 65%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
+       style="width: 70%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
   <p style="margin-top: 10px; font-size: 0.8em;">偏光状態</p>
 </div>
 
