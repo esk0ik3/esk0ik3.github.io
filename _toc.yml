@@ -17,11 +17,14 @@ parts:
       - file: math/index                  # 数学の概要ページ
         title: 数学
         sections:
-          - file: math/markdown/fourier_transformation
           - file: math/markdown/linear_algebra/index
             title: 線形代数
             sections:
-              - file: math/markdown/linear_algebra/eigenvalues      # 固有値・固有ベクトル
+              - file: math/markdown/linear_algebra/eigenvalues 
+          - file: math/markdown/fourier_analysis/index
+            title: フーリエ解析
+            sections:
+              - file: math/markdown/fourier_analysis/fourier_transformation      # 固有値・固有ベクトル
 
   # --- 物理 ---
   - chapters:
