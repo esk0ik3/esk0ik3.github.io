@@ -19,9 +19,9 @@ parts:
         sections:
           - file: math/markdown/fourier_transformation
           - file: math/markdown/linear_algebra/index
-                      title: 線形代数
-                      sections:
-                        - file: math/markdown/linear_algebra/eigenvalues      # 固有値・固有ベクトル
+            title: 線形代数
+            sections:
+              - file: math/markdown/linear_algebra/eigenvalues      # 固有値・固有ベクトル
 
   # --- 物理 ---
   - chapters:
