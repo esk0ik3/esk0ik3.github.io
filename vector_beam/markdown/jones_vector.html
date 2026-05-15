@@ -426,6 +426,7 @@ e^{-i\omega t} \newline
 e^{-i\omega t} \newline
 A e^{i(\phi-\omega t)}
 \end{bmatrix} \newline
+\therefore \mathbf{E(0,t)}
 &amp;=
 \begin{bmatrix}
 \cos{\omega t}-i\sin{\omega t} \newline
@@ -433,6 +434,108 @@ A \big(\cos{(\phi-\omega t)}-i\sin{(\phi-\omega t)}\big)
 \end{bmatrix}
 \end{aligned}
 \tag{5}
+\]</div>
+<p>実際の電場は実数であるので，この<span class="math notranslate nohighlight">\(\, (5) \,\)</span>式の実部を取ることで電場の振動方向が分かります．</p>
+<div class="math notranslate nohighlight">
+\[
+Re\big(\mathbf{E(0,t)}\big)= 
+\begin{bmatrix}
+\cos{\omega t} \newline
+A \cos{(\omega t-\phi)}
+\end{bmatrix}
+\tag{6}
+\]</div>
+<p>※見やすくなるように<span class="math notranslate nohighlight">\(\, y \,\)</span>成分の中身の正負を変えました．</p>
+<p><span class="math notranslate nohighlight">\(\, (6) \,\)</span>式から<span class="math notranslate nohighlight">\(\, \omega t \,\)</span>を消去し，その図形の形を考えます．</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+&amp;= 
+\begin{bmatrix}
+\cos{\omega t} \newline
+A \cos{(\omega t-\phi)}
+\end{bmatrix} \newline
+&amp;=
+\begin{bmatrix}
+\cos{\omega t} \newline
+A \cos{\omega t} \cos{\phi}+A \sin{\omega t} \sin{\phi}
+\end{bmatrix} \newline
+\therefore
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+&amp;=
+\begin{bmatrix}
+1 &amp;&amp; 0 \newline
+A \cos{\phi} &amp;&amp; A \sin{\phi}
+\end{bmatrix}
+\begin{bmatrix}
+\cos{\omega t} \newline
+\sin{\omega t}
+\end{bmatrix} \newline
+\end{aligned}
+\tag{7}
+\]</div>
+<p><span class="math notranslate nohighlight">\(\sin{\phi} \ne 0\,\)</span>のとき，右辺の行列は逆行列を持ちます．計算すると</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+\begin{bmatrix}
+1 &amp;&amp; 0 \newline
+A \cos{\phi} &amp;&amp; A \sin{\phi}
+\end{bmatrix}^{-1}
+&amp;=
+\frac{1}{A\sin{\phi}}
+\begin{bmatrix}
+A \sin{\phi} &amp;&amp; 0 \newline
+-A \cos{\phi} &amp;&amp; 1
+\end{bmatrix} \newline
+&amp;=
+\begin{bmatrix}
+1 &amp;&amp; 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} &amp;&amp; \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\end{aligned}
+\tag{8}
+\]</div>
+<p>となります．これを用いると</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+\begin{bmatrix}
+\cos{\omega t} \newline
+\sin{\omega t}
+\end{bmatrix}
+&amp;= 
+\begin{bmatrix}
+1 &amp;&amp; 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} &amp;&amp; \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+\end{aligned}
+\tag{9}
+\]</div>
+<p>となります．ここで</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{bmatrix}
+\cos{\omega t} \: \sin{\omega t}
+\end{bmatrix}
+\begin{bmatrix}
+\cos{\omega t} \newline
+\sin{\omega t}
+\end{bmatrix}
+=\cos^2{\omega t}+\sin^2{\omega t}
+=1
+\tag{10}
 \]</div>
 </section>
 <section id="id3">

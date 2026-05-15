@@ -67,6 +67,7 @@ e^{-i\omega t} \newline
 e^{-i\omega t} \newline
 A e^{i(\phi-\omega t)}
 \end{bmatrix} \newline
+\therefore \mathbf{E(0,t)}
 &=
 \begin{bmatrix}
 \cos{\omega t}-i\sin{\omega t} \newline
@@ -74,6 +75,114 @@ A \big(\cos{(\phi-\omega t)}-i\sin{(\phi-\omega t)}\big)
 \end{bmatrix}
 \end{aligned}
 \tag{5}
+$$
+
+実際の電場は実数であるので，この$\, (5) \,$式の実部を取ることで電場の振動方向が分かります．
+
+$$
+Re\big(\mathbf{E(0,t)}\big)= 
+\begin{bmatrix}
+\cos{\omega t} \newline
+A \cos{(\omega t-\phi)}
+\end{bmatrix}
+\tag{6}
+$$
+
+※見やすくなるように$\, y \,$成分の中身の正負を変えました．
+
+$\, (6) \,$式から$\, \omega t \,$を消去し，その図形の形を考えます．
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+&= 
+\begin{bmatrix}
+\cos{\omega t} \newline
+A \cos{(\omega t-\phi)}
+\end{bmatrix} \newline
+&=
+\begin{bmatrix}
+\cos{\omega t} \newline
+A \cos{\omega t} \cos{\phi}+A \sin{\omega t} \sin{\phi}
+\end{bmatrix} \newline
+\therefore
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+&=
+\begin{bmatrix}
+1 && 0 \newline
+A \cos{\phi} && A \sin{\phi}
+\end{bmatrix}
+\begin{bmatrix}
+\cos{\omega t} \newline
+\sin{\omega t}
+\end{bmatrix} \newline
+\end{aligned}
+\tag{7}
+$$
+
+$\sin{\phi} \ne 0\,$のとき，右辺の行列は逆行列を持ちます．計算すると
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+1 && 0 \newline
+A \cos{\phi} && A \sin{\phi}
+\end{bmatrix}^{-1}
+&=
+\frac{1}{A\sin{\phi}}
+\begin{bmatrix}
+A \sin{\phi} && 0 \newline
+-A \cos{\phi} && 1
+\end{bmatrix} \newline
+&=
+\begin{bmatrix}
+1 && 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\end{aligned}
+\tag{8}
+$$
+
+となります．これを用いると
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+\cos{\omega t} \newline
+\sin{\omega t}
+\end{bmatrix}
+&= 
+\begin{bmatrix}
+1 && 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+\end{aligned}
+\tag{9}
+$$
+
+となります．ここで
+
+$$
+\begin{bmatrix}
+\cos{\omega t} \: \sin{\omega t}
+\end{bmatrix}
+\begin{bmatrix}
+\cos{\omega t} \newline
+\sin{\omega t}
+\end{bmatrix}
+=\cos^2{\omega t}+\sin^2{\omega t}
+=1
+\tag{10}
 $$
 
 ## ジョーンズベクトルによるベクトルビームの表現
