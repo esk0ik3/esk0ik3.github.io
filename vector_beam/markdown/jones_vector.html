@@ -187,6 +187,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../math/index.html">数学</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../math/markdown/fourier_transformation.html">フーリエ変換</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../math/markdown/linear_algebra/index.html">線形代数</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../math/markdown/linear_algebra/eigenvalues.html">固有値固有ベクトル</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -426,7 +430,7 @@ e^{-i\omega t} \newline
 e^{-i\omega t} \newline
 A e^{i(\phi-\omega t)}
 \end{bmatrix} \newline
-\therefore \mathbf{E(0,t)}
+\therefore \mathbf{E}(0,t)
 &amp;=
 \begin{bmatrix}
 \cos{\omega t}-i\sin{\omega t} \newline
@@ -438,7 +442,7 @@ A \big(\cos{(\phi-\omega t)}-i\sin{(\phi-\omega t)}\big)
 <p>実際の電場は実数であるので，この<span class="math notranslate nohighlight">\(\, (5) \,\)</span>式の実部を取ることで電場の振動方向が分かります．</p>
 <div class="math notranslate nohighlight">
 \[
-Re\big(\mathbf{E(0,t)}\big)= 
+Re\big(\mathbf{E}(0,t)\big)= 
 \begin{bmatrix}
 \cos{\omega t} \newline
 A \cos{(\omega t-\phi)}
