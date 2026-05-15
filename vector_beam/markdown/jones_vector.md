@@ -67,7 +67,7 @@ e^{-i\omega t} \newline
 e^{-i\omega t} \newline
 A e^{i(\phi-\omega t)}
 \end{bmatrix} \newline
-\therefore \mathbf{E(0,t)}
+\therefore \mathbf{E}(0,t)
 &=
 \begin{bmatrix}
 \cos{\omega t}-i\sin{\omega t} \newline
@@ -80,7 +80,7 @@ $$
 実際の電場は実数であるので，この$\, (5) \,$式の実部を取ることで電場の振動方向が分かります．
 
 $$
-Re\big(\mathbf{E(0,t)}\big)= 
+Re\big(\mathbf{E}(0,t)\big)= 
 \begin{bmatrix}
 \cos{\omega t} \newline
 A \cos{(\omega t-\phi)}
