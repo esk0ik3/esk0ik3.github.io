@@ -3,7 +3,7 @@
 完全偏光である光の電場は，以下のように表現できます．ただし，光は$\, z \,$軸方向に伝播しており，電場は$\, x, y \,$面内で振動しているものとします.
 
 $$
-\mathbf{E(z,t)} = 
+\mathbf{E}(z,t) = 
 \mathbf{J}e^{i(kz-\omega t)}
 \tag{1}
 $$
@@ -42,7 +42,7 @@ $$
 ここで$\, (3) \,$式を$\, (1) \,$式に代入します．
 
 $$
-\mathbf{E(z,t)} = 
+\mathbf{E}(z,t) = 
 \begin{bmatrix}
 1 \newline
 A e^{i\phi}
@@ -55,7 +55,7 @@ $$
 
 $$
 \begin{aligned}
-\mathbf{E(0,t)}
+\mathbf{E}(0,t)
 &= 
 \begin{bmatrix}
 1 \newline
@@ -183,6 +183,32 @@ $$
 =\cos^2{\omega t}+\sin^2{\omega t}
 =1
 \tag{10}
+$$
+
+であるので
+
+$$
+\begin{aligned}
+\Biggl(
+\begin{bmatrix}
+1 && 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+\Biggr)^t
+\begin{bmatrix}
+1 && 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+\end{aligned}
+\tag{9}
 $$
 
 ## ジョーンズベクトルによるベクトルビームの表現

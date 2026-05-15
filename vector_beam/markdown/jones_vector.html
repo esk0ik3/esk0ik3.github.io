@@ -367,7 +367,7 @@ document.write(`
 <p>完全偏光である光の電場は，以下のように表現できます．ただし，光は<span class="math notranslate nohighlight">\(\, z \,\)</span>軸方向に伝播しており，電場は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>面内で振動しているものとします.</p>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{E(z,t)} = 
+\mathbf{E}(z,t) = 
 \mathbf{J}e^{i(kz-\omega t)}
 \tag{1}
 \]</div>
@@ -402,7 +402,7 @@ A e^{i\phi}
 <p>ここで<span class="math notranslate nohighlight">\(\, (3) \,\)</span>式を<span class="math notranslate nohighlight">\(\, (1) \,\)</span>式に代入します．</p>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{E(z,t)} = 
+\mathbf{E}(z,t) = 
 \begin{bmatrix}
 1 \newline
 A e^{i\phi}
@@ -414,7 +414,7 @@ e^{i(kz-\omega t)}
 <div class="math notranslate nohighlight">
 \[
 \begin{aligned}
-\mathbf{E(0,t)}
+\mathbf{E}(0,t)
 &amp;= 
 \begin{bmatrix}
 1 \newline
@@ -536,6 +536,31 @@ y
 =\cos^2{\omega t}+\sin^2{\omega t}
 =1
 \tag{10}
+\]</div>
+<p>であるので</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+\Biggl(
+\begin{bmatrix}
+1 &amp;&amp; 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} &amp;&amp; \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+\Biggr)^t
+\begin{bmatrix}
+1 &amp;&amp; 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} &amp;&amp; \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+\end{aligned}
+\tag{9}
 \]</div>
 </section>
 <section id="id3">
