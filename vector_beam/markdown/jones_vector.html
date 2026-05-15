@@ -349,10 +349,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ジョーンズベクトルの見方</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">直線偏光</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">円偏光</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ジョーンズベクトルによるベクトルビームの表現</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">偏光の表現</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ジョーンズベクトルによるベクトルビームの表現</a></li>
 </ul>
             </nav>
         </div>
@@ -367,6 +365,9 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>ジョーンズベクトル<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>完全偏光である光の電場は，以下に⽰すような2次元の複素ベクトルで表現できます．このベクトルはジョーンズベクトルと呼ばれています．ただし，光は<span class="math notranslate nohighlight">\(\, z \,\)</span>軸方向に伝播しており，電場は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>面内で振動しているものとします.</p>
+<blockquote>
+<div><p>1941年にアメリカの物理学者ロバート・クラーク・ジョーンズ(Robert Clark Jones, 1916–2004)によって考案されました.</p>
+</div></blockquote>
 <div class="math notranslate nohighlight">
 \[
 \mathbf{E} = 
@@ -376,222 +377,23 @@ A _ {y} e^{i\phi _ y}
 \end{bmatrix}
 \tag{1}
 \]</div>
-<p>ここで，<span class="math notranslate nohighlight">\(A _ {x}, A _ {y} \,\)</span>はそれぞれ<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分の振幅を表し，<span class="math notranslate nohighlight">\(\phi _ x, \phi _ y \,\)</span>はそれぞれ<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分の位相を表しています．</p>
-<p>これは1941年にアメリカの物理学者ジョーンズ(R. Clark Jones)によって考案されたもので <strong>ジョーンズベクトル</strong> と言い,上式のように書くことで偏光状態を <strong>複素ベクトル</strong> によって表すことができます. <span class="math notranslate nohighlight">\(x,y\)</span> 成分の振幅や位相の違いによって色々な偏光状態が表されます.</p>
-<p>ここで <strong>※全体にかかる振幅の大きさや位相は偏光の状態に影響しない</strong> ことに注意してくださいこれは</p>
-<ul class="simple">
-<li><p>全体にかかる振幅とは、例えば水平方向に振動している電場の振動の幅が変わるだけで水平であるという形は変わらない.</p></li>
-<li><p>全体にかかる位相とは、例えば水平方向に振動している電場をどの瞬間から観測するのか(右に一番振れているところから観測するのか,左に一番振れているところから観測するのか)の違いであり物理的にはどちらも同じ電場を表している.</p></li>
-</ul>
-<p>ということに対応しています.つまり <span class="math notranslate nohighlight">\((1.1)\)</span> 式は</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{E}=E _ {x0} e^{i\phi _ x}
-\begin{bmatrix}
-1 \newline
-\frac{E _ {y0}}{E _ {x0}} e^{i(\phi _ y-\phi _ x)}
-\end{bmatrix}\propto
-\begin{bmatrix}
-1 \newline
-a e^{i\delta}
-\end{bmatrix}
-\]</div>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(a = \frac{E _ {y0}}{E _ {x0}}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\delta = \phi _ y-\phi _ x\)</span></p></li>
-</ul>
-<p>としても <strong>同じ偏光状態</strong> を表しているということです.</p>
-<div style="page-break-before:always"></div>
+<p><span class="math notranslate nohighlight">\(A _ {x}, A _ {y} \,\)</span>は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分の振幅を表し，<span class="math notranslate nohighlight">\(\phi _ x, \phi _ y \,\)</span>は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分の位相を表しています．</p>
 <section id="id2">
-<h2>ジョーンズベクトルの見方<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>ジョーンズベクトルは複素ベクトルであるので成分だけで見るとどのような偏光状態を表しているかは一目ではわからないです.そこでこのベクトルが時間変化したときにどのような形になるかを考えます.時間変化を見たいので <span class="math notranslate nohighlight">\(e^{i\omega t}\)</span> をかけます.</p>
+<h2>偏光の表現<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>ジョーンズベクトルによって偏光状態を表現することを考えます．偏光とは電場の振動方向であるので，<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分間の振幅比と位相差が重要です．よって，以下のようにジョーンズベクトルを規格化します．</p>
 <div class="math notranslate nohighlight">
 \[
-\vec{E}=e^{i\omega t}
+\mathbf{E} = 
 \begin{bmatrix}
-E_{x0} e^{i\phi_x} \newline
-E_{y0} e^{i\phi_y}
+1 \newline
+A e^{i\phi}
 \end{bmatrix}
+\tag{2}
 \]</div>
-<p>次にこのベクトルを実部と虚部に分けます.</p>
-<div class="math notranslate nohighlight">
-\[
-\vec{E}=
-\begin{bmatrix}
-E_{x0}[\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}+i(\cos{\omega t}\sin{\phi _ x}+\sin{\omega t}\cos{\phi _ x})] \newline
-E_{y0}[\cos{\omega t}\cos{\phi _ y}-\sin{\omega t}\sin{\phi _ y}+i(\cos{\omega t}\sin{\phi _ y}+\sin{\omega t}\cos{\phi _ y})] 
-\end{bmatrix}
-\]</div>
-<p>最後に実部をとり <span class="math notranslate nohighlight">\(t\)</span> を変化させたときのベクトルの軌跡を見れば良いです.つまり</p>
-<div class="math notranslate nohighlight">
-\[
-Re(\vec{E})=
-\begin{bmatrix}
-E_{x0}(\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}) \newline
-E_{y0}(\cos{\omega t}\cos{\phi _ y}-\sin{\omega t}\sin{\phi _ y}) 
-\end{bmatrix} \quad (2.1)
-\]</div>
-<p>の軌跡を考えます.</p>
-<p>そもそも波を複素数で表現するのは実部だけ( <span class="math notranslate nohighlight">\(\cos\)</span> だけ)で考えると計算が面倒になるという問題を解決するためだったので最終的には実部を取るというのは理にかなっています.</p>
-<p>次の項からは代表的な偏光状態について考えます.</p>
-<div style="page-break-before:always"></div>
+<p>ただし，<span class="math notranslate nohighlight">\(\, A = \frac{A _ y}{A _ x} \, , \phi = \phi _ y - \phi _ x \,\)</span>です．</p>
 </section>
 <section id="id3">
-<h2>直線偏光<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\((1.1)\)</span> 式において <span class="math notranslate nohighlight">\(x,y\)</span> 成分の位相が共に等しいとき,つまり</p>
-<div class="math notranslate nohighlight">
-\[
-\phi_y = \phi_x
-\]</div>
-<p>の場合を考えます.軌跡を考えるベクトルは</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-Re(\vec{E})
-&amp;=
-\begin{bmatrix}
-E_{x0}(\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}) \newline
-E_{y0}(\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}) 
-\end{bmatrix} \newline
-&amp;=
-\begin{bmatrix}
-E_{x0}\cos{(\omega t+\phi _ x)} \newline
-E_{y0}\cos{(\omega t+\phi _ x)}
-\end{bmatrix} \newline
-\therefore Re(\vec{E})
-&amp;=
-\cos{(\omega t+\phi _ x)}
-\begin{bmatrix}
-E_{x0} \newline
-E_{y0}
-\end{bmatrix}
-\end{aligned}
-\]</div>
-<p><span class="math notranslate nohighlight">\(x,y\)</span> 成分に位相差はないので振幅の比によって偏光状態が決まります.また, <span class="math notranslate nohighlight">\(t\)</span> を変化させてこのベクトルの軌道を見てもこれらの成分の比は変わらないので直線に変化します.この偏光状態を直線偏光と言います.</p>
-</section>
-<section id="id4">
-<h2>円偏光<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<p>次に振幅が等しく,x成分の位相 <span class="math notranslate nohighlight">\(\delta _ x\)</span> ,y成分の位相 <span class="math notranslate nohighlight">\(\delta _ y\)</span> が <span class="math notranslate nohighlight">\(\delta = \delta _ y - \delta _ x\)</span> だけ遅れている場合を考えます.まず</p>
-<div class="math notranslate nohighlight">
-\[
-\delta = \frac{\pi}{2}
-\]</div>
-<p>の場合を考えます.</p>
-<div class="math notranslate nohighlight">
-\[
-\phi_y = \phi_x + \frac{\pi}{2}
-\]</div>
-<p>であるのでこれを(2.1)に代入すると</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-  Re(\vec{E})&amp;=
-  \begin{bmatrix}
-    E_{x0}(\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}) \newline
-    E_{y0}(\cos{\omega t}\cos{\phi _ y}-\sin{\omega t}\sin{\phi _ y}) 
-  \end{bmatrix} \newline
-    &amp;=E _ {x0}
-  \begin{bmatrix}
-    \cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x} \newline
-    \cos{\omega t}\cos{(\phi _ x+\frac{\pi}{2})}-\sin{\omega t}\sin{(\phi _ x+\frac{\pi}{2})}
-  \end{bmatrix} \newline
-    &amp;=E _ {x0}
-  \begin{bmatrix}
-    \cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x} \newline
-    -\cos{\omega t}\sin{\phi _ x}-\sin{\omega t}\cos{\phi _ x}
-  \end{bmatrix} \newline
-    \therefore Re(\vec{E})&amp;=
-    E _ {x0}
-  \begin{bmatrix}
-    \cos{\omega t} \newline
-    -\sin{\omega t}
-  \end{bmatrix}
-\end{aligned}
-\]</div>
-<p>任意の <span class="math notranslate nohighlight">\(\phi _ x\)</span> について成り立つので <span class="math notranslate nohighlight">\(\phi _ x=0\)</span> としました.この軌道は右回りの円になるのでこれは <strong>右回り円偏光</strong> となります.</p>
-<p>また(1.1)に代入するとジョーンズベクトルは</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-  \vec{E}
-    &amp;=E_{x0}
-  \begin{bmatrix}
-    e^{i \varphi_x} \newline
-    e^{i (\varphi_x + \frac{\pi}{2})}
-  \end{bmatrix} \newline
-    &amp;= E_{x0} e^{i\varphi_x}
-  \begin{bmatrix}
-    1 \newline
-    e^{i\frac{\pi}{2}}
-  \end{bmatrix} \newline
-    &amp;= E_{x0} e^{i\varphi_x} \newline
-  \therefore \vec{E} &amp;=E_{x0} e^{i\varphi_x}
-  \begin{bmatrix}
-    1 \newline
-    i
-  \end{bmatrix} \newline
-\end{aligned}
-\]</div>
-<p>となるのでこのジョーンズベクトルは右回り円偏光を表していることが分かりました.</p>
-<p>次に</p>
-<div class="math notranslate nohighlight">
-\[
-\delta = -\frac{\pi}{2}
-\]</div>
-<p>の場合を考えます.同様に計算すると</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-  Re(\vec{E})&amp;=
-  \begin{bmatrix}
-    E_{x0}(\cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x}) \newline
-    E_{y0}(\cos{\omega t}\cos{\phi _ y}-\sin{\omega t}\sin{\phi _ y}) 
-  \end{bmatrix} \newline
-    &amp;=E _ {x0}
-  \begin{bmatrix}
-    \cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x} \newline
-    \cos{\omega t}\cos{(\phi _ x-\frac{\pi}{2})}-\sin{\omega t}\sin{(\phi _ x-\frac{\pi}{2})}
-  \end{bmatrix} \newline
-    &amp;=E _ {x0}
-  \begin{bmatrix}
-    \cos{\omega t}\cos{\phi _ x}-\sin{\omega t}\sin{\phi _ x} \newline
-    \cos{\omega t}\sin{\phi _ x}+\sin{\omega t}\cos{\phi _ x}
-  \end{bmatrix} \newline
-    \therefore Re(\vec{E})&amp;=
-    E _ {x0}
-  \begin{bmatrix}
-    \cos{\omega t} \newline
-    \sin{\omega t}
-  \end{bmatrix}
-\end{aligned}
-\]</div>
-<p>となりこれは <strong>左回り円偏光</strong> となります.</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{aligned}
-  \vec{E}
-    &amp;=E_{x0}
-  \begin{bmatrix}
-    e^{i \varphi_x} \newline
-    e^{i (\varphi_x - \frac{\pi}{2})}
-  \end{bmatrix} \newline
-    &amp;= E_{x0} e^{i\varphi_x}
-  \begin{bmatrix}
-    1 \newline
-    e^{-i\frac{\pi}{2}}
-  \end{bmatrix} \newline
-    &amp;= E_{x0} e^{i\varphi_x} \newline
-  \therefore \vec{E}&amp;=E_{x0} e^{i\varphi_x}
-  \begin{bmatrix}
-    1 \newline
-    -i
-  \end{bmatrix} \newline
-\end{aligned}
-\]</div>
-<p>となりこのジョーンズベクトルは左回り円偏光を表していることが分かりました.</p>
-</section>
-<section id="id5">
-<h2>ジョーンズベクトルによるベクトルビームの表現<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<h2>ジョーンズベクトルによるベクトルビームの表現<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <p>ベクトルビームは断面内で空間的な偏光不均一性を持つため，ジョーンズベクトルを位置の関数として定義することで，その特性を表現します．</p>
 <p>ビームは円形であることが多いため，極座標系で位置を表現したほうが分かりやすいです．そこで，径成分<span class="math notranslate nohighlight">\(\, r \,\)</span>，方位角<span class="math notranslate nohighlight">\(\, \varphi \,\)</span>を用いてベクトルビームのジョーンズベクトルは</p>
 <div class="math notranslate nohighlight">
@@ -682,10 +484,8 @@ g(r, \varphi)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">ジョーンズベクトルの見方</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">直線偏光</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">円偏光</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">ジョーンズベクトルによるベクトルビームの表現</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">偏光の表現</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">ジョーンズベクトルによるベクトルビームの表現</a></li>
 </ul>
   </nav></div>
 
