@@ -364,33 +364,76 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>ジョーンズベクトル<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>完全偏光である光の電場は，以下に⽰すような2次元の複素ベクトルで表現できます．このベクトルはジョーンズベクトルと呼ばれています．ただし，光は<span class="math notranslate nohighlight">\(\, z \,\)</span>軸方向に伝播しており，電場は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>面内で振動しているものとします.</p>
-<blockquote>
-<div><p>1941年にアメリカの物理学者ロバート・クラーク・ジョーンズ(Robert Clark Jones, 1916–2004)によって考案されました.</p>
-</div></blockquote>
+<p>完全偏光である光の電場は，以下のように表現できます．ただし，光は<span class="math notranslate nohighlight">\(\, z \,\)</span>軸方向に伝播しており，電場は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>面内で振動しているものとします.</p>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{E} = 
+\mathbf{E(z,t)} = 
+\mathbf{J}e^{i(kz-\omega t)}
+\tag{1}
+\]</div>
+<p>この<span class="math notranslate nohighlight">\(\, \mathbf{J} \,\)</span>は2次元複素ベクトルであり，ジョーンズベクトルと呼ばれています．</p>
+<blockquote>
+<div><p>ジョーンズベクトルは，1941年にアメリカの物理学者ロバート・クラーク・ジョーンズ(Robert Clark Jones, 1916–2004)によって考案されました.</p>
+</div></blockquote>
+<p>具体的には以下のように書けます．</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{J} = 
 \begin{bmatrix}
 A _ {x} e^{i\phi _ x} \newline
 A _ {y} e^{i\phi _ y}
 \end{bmatrix}
-\tag{1}
+\tag{2}
 \]</div>
 <p><span class="math notranslate nohighlight">\(A _ {x}, A _ {y} \,\)</span>は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分の振幅を表し，<span class="math notranslate nohighlight">\(\phi _ x, \phi _ y \,\)</span>は<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分の位相を表しています．</p>
 <section id="id2">
 <h2>偏光の表現<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>ジョーンズベクトルによって偏光状態を表現することを考えます．偏光とは電場の振動方向であるので，<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分間の振幅比と位相差が重要です．よって，以下のようにジョーンズベクトルを規格化します．</p>
+<p>ジョーンズベクトルによって偏光状態を表現できます．偏光とは電場の振動方向であるので，<span class="math notranslate nohighlight">\(\, x, y \,\)</span>成分間の振幅比と位相差が重要です．よって，以下のようにジョーンズベクトルを規格化してもokです．</p>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{E} = 
+\mathbf{J} = 
 \begin{bmatrix}
 1 \newline
 A e^{i\phi}
 \end{bmatrix}
-\tag{2}
+\tag{3}
 \]</div>
 <p>ただし，<span class="math notranslate nohighlight">\(\, A = \frac{A _ y}{A _ x} \, , \phi = \phi _ y - \phi _ x \,\)</span>です．</p>
+<p>ここで<span class="math notranslate nohighlight">\(\, (3) \,\)</span>式を<span class="math notranslate nohighlight">\(\, (1) \,\)</span>式に代入します．</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{E(z,t)} = 
+\begin{bmatrix}
+1 \newline
+A e^{i\phi}
+\end{bmatrix}
+e^{i(kz-\omega t)}
+\tag{4}
+\]</div>
+<p>今は，偏光状態だけを考えているので，わかりやすいように<span class="math notranslate nohighlight">\(\, z=0 \,\)</span>の地点を考えます．</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}
+\mathbf{E(0,t)}
+&amp;= 
+\begin{bmatrix}
+1 \newline
+A e^{i\phi}
+\end{bmatrix}
+e^{-i\omega t} \newline
+&amp;=
+\begin{bmatrix}
+e^{-i\omega t} \newline
+A e^{i(\phi-\omega t)}
+\end{bmatrix} \newline
+&amp;=
+\begin{bmatrix}
+\cos{\omega t}-i\sin{\omega t} \newline
+A \big(\cos{(\phi-\omega t)}-i\sin{(\phi-\omega t)}\big)
+\end{bmatrix}
+\end{aligned}
+\tag{5}
+\]</div>
 </section>
 <section id="id3">
 <h2>ジョーンズベクトルによるベクトルビームの表現<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
