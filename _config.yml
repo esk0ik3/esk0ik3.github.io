@@ -4,14 +4,16 @@ execute:
   execute_notebooks: off
 
 html:
-  # 【必須】ボタンを表示するために、以下の2行でリポジトリの場所を指定します
-  repository_url: "https://github.com/esk0ik3/esk0ik3.github.io"
-  repository_branch: "main"
-
-  # 手動ダークモード切り替えボタンの非表示設定
+  # 以下の項目はすべて「theme_config:」の中に右にズラして入れます
   theme_config:
     theme_dev_mode: false
+    
+    # 1. ダークモードボタンを非表示
     header_buttons_omit_dark_mode: true
-    use_repository_button: true  # これらを使うために上のURLが必要です
+    
+    # 2. GitHub連携の設定
+    repository_url: "https://github.com/esk0ik3/esk0ik3.github.io"
+    repository_branch: "main"
+    use_repository_button: true
     use_edit_page_button: true
     use_issues_button: true
