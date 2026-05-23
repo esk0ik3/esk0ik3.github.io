@@ -189,6 +189,14 @@ $$
 
 $$
 \begin{aligned}
+\begin{bmatrix}
+\cos{\omega t} \: \sin{\omega t}
+\end{bmatrix}
+\begin{bmatrix}
+\cos{\omega t} \newline
+\sin{\omega t}
+\end{bmatrix}
+&=
 \Biggl(
 \begin{bmatrix}
 1 && 0 \newline
@@ -206,10 +214,59 @@ y
 \begin{bmatrix}
 x \newline
 y
+\end{bmatrix} \newline
+&=
+\begin{bmatrix}
+x \quad y
 \end{bmatrix}
+\begin{bmatrix}
+1 && 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+^t
+\begin{bmatrix}
+1 && 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix} \newline
+&=
+\begin{bmatrix}
+x \quad y
+\end{bmatrix}
+\begin{bmatrix}
+1 && -\frac{\cos{\phi}}{\sin{\phi}} \newline
+0 && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+1 && 0 \newline
+-\frac{\cos{\phi}}{\sin{\phi}} && \frac{1}{A\sin{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix} \newline
+&=
+\begin{bmatrix}
+x \quad y
+\end{bmatrix}
+\begin{bmatrix}
+1 && -\frac{\cos{\phi}}{A\sin^2{\phi}} \newline
+-\frac{\cos{\phi}}{A\sin^2{\phi}} && \frac{1}{A^2\sin^2{\phi}}
+\end{bmatrix}
+\begin{bmatrix}
+x \newline
+y
+\end{bmatrix}
+=
+1
 \end{aligned}
-\tag{9}
+\tag{11}
 $$
+
+このように，正定値対称行列を用いた，2次形式として記述できます．
 
 ## ジョーンズベクトルによるベクトルビームの表現
 
