@@ -2,18 +2,3 @@ author: "esk0ik3"
 logo: go_back_home.png
 execute:
   execute_notebooks: off
-
-html:
-  # 以下の項目はすべて「theme_config:」の中に右にズラして入れます
-  theme_config:
-    theme_dev_mode: false
-    
-    # 1. ダークモードボタンを非表示
-    header_buttons_omit_dark_mode: true
-    
-    # 2. GitHub連携の設定
-    repository_url: "https://github.com/esk0ik3/esk0ik3.github.io"
-    repository_branch: "main"
-    use_repository_button: true
-    use_edit_page_button: true
-    use_issues_button: true
