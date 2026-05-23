@@ -2,7 +2,13 @@
 
 ここでは自分が大学生の時に研究していた内容をざっくり説明します．途中で出てくる内容についてはこのあとの章で詳しく説明します．
 
-ラジアル偏光ビームは理想的には以下のような光強度分布を持ちます．
+ベクトルビームの例をいくつか下に示します．矢印はビーム断面内の電場の振動方向を表しています．
+
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/radial_azimuthal_lemon_monstar_star.png" 
+       style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
+  <p style="margin-top: 10px; font-size: 0.9em;">ベクトルビームの例</p>
+</div>
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/sim_radial_intensity.png" 
