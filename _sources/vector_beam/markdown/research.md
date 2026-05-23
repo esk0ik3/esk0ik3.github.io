@@ -7,14 +7,14 @@
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/sim_radial_intensity.png" 
        style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
-  <p style="margin-top: 10px; font-size: 0.8em;">ラジアル偏光ビームの各偏光状態の光強度(シミュレーション)</p>
+  <p style="margin-top: 10px; font-size: 0.9em;">ラジアル偏光ビームの各偏光状態の光強度(シミュレーション)</p>
 </div>
 
 しかし，実験では様々な要因によって，以下のようなラジアル偏光ビームになってしまいます．
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/exp_radial_intensity_1.png" 
-       style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
+       style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
   <p style="margin-top: 10px; font-size: 0.9em;">ラジアル偏光ビームの各偏光状態の光強度(実験結果:補正前)</p>
 </div>
 
@@ -22,12 +22,6 @@
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/exp_radial_intensity_2.png" 
-       style="width: 100%; background-color: transparent !important; border: none !important; box-shadow: none !important;">
+       style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
   <p style="margin-top: 10px; font-size: 0.9em;">ラジアル偏光ビームの各偏光状態の光強度(実験結果:補正後)</p>
-</div>
-
-<div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/sim_radial_intensity.png" 
-       style="width: 100%; background-color: red !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
-  <p style="margin-top: 10px; font-size: 0.8em;">ラジアル偏光ビームの各偏光状態の光強度(シミュレーション)</p>
 </div>
