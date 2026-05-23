@@ -2,3 +2,16 @@ author: "esk0ik3"
 logo: go_back_home.png
 execute:
   execute_notebooks: off
+
+html:
+  theme_config:
+    theme_dev_mode: false
+    # ダークモードの切り替えボタンを非表示にする設定
+    header_buttons_omit_dark_mode: true
+
+html:
+  repository_url: "https://github.com/esk0ik3/esk0ik3.github.io"
+  repository_branch: "main"
+  use_repository_button: true     # GitHubリポジトリへのリンクボタンを表示
+  use_edit_page_button: true      # 「GitHubで編集する」ボタンを表示
+  use_issues_button: true         # 「Issueを開く」ボタンを表示
