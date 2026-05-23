@@ -2,9 +2,3 @@ author: "esk0ik3"
 logo: go_back_home.png
 execute:
   execute_notebooks: off
-
-# --- ここから追記 ---
-html:
-  theme_config:
-    # ダークモードの切り替えボタンを非表示にする
-    header_buttons_omit_dark_mode: true

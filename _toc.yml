@@ -7,6 +7,7 @@ parts:
       - file: vector_beam/index           # ベクトルビームの概要ページ
         title: ベクトルビーム
         sections:
+          - file: vector_beam/markdown/research        
           - file: vector_beam/markdown/textbook
           - file: vector_beam/markdown/thesis
           - file: vector_beam/markdown/jones_vector
