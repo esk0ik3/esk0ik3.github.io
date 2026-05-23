@@ -9,7 +9,6 @@ html:
     # ダークモードの切り替えボタンを非表示にする設定
     header_buttons_omit_dark_mode: true
 
-html:
   repository_url: "https://github.com/esk0ik3/esk0ik3.github.io"
   repository_branch: "main"
   use_repository_button: true     # GitHubリポジトリへのリンクボタンを表示
