@@ -55,3 +55,13 @@
        style="width: 50%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
   <p style="margin-top: 5px; font-size: 0.9em;">実験結果(補正後)</p>
 </div>
+
+なお，使用した光学系は以下のものです．
+
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/vector_beam_optical_setup.png" 
+       style="width: 50%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
+  <p style="margin-top: 5px; font-size: 0.9em;">実験光学系</p>
+</div>
+
+BS:ビームスプリッター, PBS:偏光ビームスプリッター, BE:ビームエキスパンダー, RAP:三角プリズム, SLM:空間光変調素子, HWP:1/2波長板, QWP:1/4波長板, SH sensor:シャックハルトマンセンサー.
