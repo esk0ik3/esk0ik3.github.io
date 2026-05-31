@@ -32,7 +32,7 @@ parts:
       - file: physics/index               # 物理の概要ページ
         title: 物理
         sections:
-          - file: physics/markdown/reflection
+          - file: physics/markdown/diffraction
 
   # --- 情報 ---
   - chapters:
