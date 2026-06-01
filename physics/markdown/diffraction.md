@@ -11,7 +11,10 @@
 まず，この距離$\, r \,$は，$x, y, x_0, y_0, z \,$を用いて
 
 $$
-r = \sqrt{(x-x_0)^2+(y-y_0)^2+z^2}
+\begin{aligned}
+r &= \sqrt{(x-x_0)^2+(y-y_0)^2+z^2} \newline
+&= z^2 \sqrt{1+\frac{(x-x_0)^2}{z^2}+\frac{(y-y_0)^2}{z^2}}
+\end{aligned}
 \tag{1}
 $$
 
@@ -20,7 +23,7 @@ $$
 ここで，$\alpha \,$がめっちゃ小さいとき
 
 $$
-\sqrt{1+\alpha} \propto 1+\frac{\alpha}{2}
+\sqrt{1+\alpha} \approx 1+\frac{\alpha}{2}
 \tag{2}
 $$
 
