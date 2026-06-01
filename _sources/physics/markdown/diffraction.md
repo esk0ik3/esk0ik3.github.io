@@ -30,7 +30,10 @@ $$
 と近似できるので，(2)式を用いると，(1)式は
 
 $$
-r \approx z+\frac{(x-x_0)^2+(y-y_0)^2}{2z}
+\begin{aligned}
+r &= z(1+\frac{(x-x_0)^2+(y-y_0)^2}{2z^2}) \newline
+&\approx z+\frac{(x-x_0)^2+(y-y_0)^2}{2z}
+\end{aligned}
 \tag{3}
 $$
 
@@ -48,7 +51,10 @@ $$
 
 $$
 U(x \, y)=\frac{1}{i \lambda} \iint^{\infty} _ {-\infty}{U _ 0(x _ 0 \, y _ 0)\frac{e^{ikr}}{r}\cos{\theta}dx _ 0dy _ 0}
+\tag{5}
 $$
+
+と書けるので，これに先ほど近似した$\, r \,$を代入すると
 
 $$
 

@@ -395,7 +395,10 @@ r &amp;= \sqrt{(x-x_0)^2+(y-y_0)^2+z^2} \newline
 <p>と近似できるので，(2)式を用いると，(1)式は</p>
 <div class="math notranslate nohighlight">
 \[
-r \approx z+\frac{(x-x_0)^2+(y-y_0)^2}{2z}
+\begin{aligned}
+r &amp;= z(1+\frac{(x-x_0)^2+(y-y_0)^2}{2z^2}) \newline
+&amp;\approx z+\frac{(x-x_0)^2+(y-y_0)^2}{2z}
+\end{aligned}
 \tag{3}
 \]</div>
 <p>と近似できます．ここで，各点での光は球面波として伝播するものと考えます．つまり，距離<span class="math notranslate nohighlight">\(, r \,\)</span>だけ離れている点へ伝播するとき，その場所では</p>
@@ -410,7 +413,9 @@ u = \frac{e^{-ikr}}{r}
 <div class="math notranslate nohighlight">
 \[
 U(x \, y)=\frac{1}{i \lambda} \iint^{\infty} _ {-\infty}{U _ 0(x _ 0 \, y _ 0)\frac{e^{ikr}}{r}\cos{\theta}dx _ 0dy _ 0}
+\tag{5}
 \]</div>
+<p>と書けるので，これに先ほど近似した<span class="math notranslate nohighlight">\(\, r \,\)</span>を代入すると</p>
 <div class="math notranslate nohighlight">
 \[\]</div>
 </section>
