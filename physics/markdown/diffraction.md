@@ -13,7 +13,7 @@
 $$
 \begin{aligned}
 r &= \sqrt{(x-x_0)^2+(y-y_0)^2+z^2} \newline
-&= z^2 \sqrt{1+\frac{(x-x_0)^2}{z^2}+\frac{(y-y_0)^2}{z^2}}
+&= z \sqrt{1+\frac{(x-x_0)^2}{z^2}+\frac{(y-y_0)^2}{z^2}}
 \end{aligned}
 \tag{1}
 $$
