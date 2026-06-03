@@ -2,3 +2,8 @@ author: "esk0ik3"
 logo: go_back_home.png
 execute:
   execute_notebooks: off
+
+html:
+  use_issues_button: false
+  use_repository_button: false
+  use_edit_button: false
