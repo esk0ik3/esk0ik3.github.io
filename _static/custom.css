@@ -18,16 +18,8 @@ a.right-next {
   display: none !important;
 }
 
-/* Hide light/dark mode toggle button - target the specific navbar icon button */
-.pst-navbar-icon {
-  display: none !important;
-}
-
-button.pst-navbar-icon {
-  display: none !important;
-}
-
-.bd-header-article .btn {
+/* Hide ONLY the light/dark mode toggle button */
+.theme-switch-button {
   display: none !important;
 }
 
