@@ -18,10 +18,42 @@ a.right-next {
   display: none !important;
 }
 
-/* Hide light/dark mode toggle button */
+/* Hide light/dark mode toggle button - all possible selectors */
 button.theme-toggle,
 button[aria-label*="light"],
 button[aria-label*="dark"],
-.theme-switch-button {
+button[aria-label*="toggle"],
+.theme-switch-button,
+button[title*="dark"],
+button[title*="light"],
+button svg[class*="light"],
+button svg[class*="dark"],
+.bd-navbar .navbar-toggler:not(.sidebar-toggler),
+.bd-navbar button[title*="theme"],
+button[class*="theme"],
+button[data-toggle="tooltip"],
+li button:last-child,
+.header-article__inner button:last-child {
   display: none !important;
+}
+
+/* Force dark mode on html element */
+html {
+  color-scheme: dark !important;
+  --pst-color-mode: dark !important;
+}
+
+html[data-theme],
+html.dark {
+  --pst-color-mode: dark !important;
+}
+
+/* Override any light mode attempt */
+html.light {
+  display: none !important;
+}
+
+html[data-theme="light"] {
+  display: block !important;
+  --pst-color-mode: dark !important;
 }
