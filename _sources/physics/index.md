@@ -1,4 +1,6 @@
-# 目次
+# 物理
+
+## 目次
 
 - [光の回折](https://esk0ik3.github.io/physics/markdown/diffraction.html)
 - [ジョーンズ行列](https://esk0ik3.github.io/physics/markdown/jones_matrix.html)
