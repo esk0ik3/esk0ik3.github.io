@@ -18,22 +18,16 @@ a.right-next {
   display: none !important;
 }
 
-/* Hide light/dark mode toggle button - all possible selectors */
-button.theme-toggle,
-button[aria-label*="light"],
-button[aria-label*="dark"],
-button[aria-label*="toggle"],
-.theme-switch-button,
-button[title*="dark"],
-button[title*="light"],
-button svg[class*="light"],
-button svg[class*="dark"],
-.bd-navbar .navbar-toggler:not(.sidebar-toggler),
-.bd-navbar button[title*="theme"],
-button[class*="theme"],
-button[data-toggle="tooltip"],
-li button:last-child,
-.header-article__inner button:last-child {
+/* Hide light/dark mode toggle button - target the specific navbar icon button */
+.pst-navbar-icon {
+  display: none !important;
+}
+
+button.pst-navbar-icon {
+  display: none !important;
+}
+
+.bd-header-article .btn {
   display: none !important;
 }
 
@@ -48,12 +42,7 @@ html.dark {
   --pst-color-mode: dark !important;
 }
 
-/* Override any light mode attempt */
-html.light {
-  display: none !important;
-}
-
+/* Prevent light mode switching */
 html[data-theme="light"] {
-  display: block !important;
   --pst-color-mode: dark !important;
 }
