@@ -10,3 +10,5 @@ html:
   use_dark_mode: true
   extra_css:
     - _static/custom.css
+  extra_js:
+    - _static/github-button.js
