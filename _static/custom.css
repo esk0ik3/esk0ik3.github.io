@@ -17,3 +17,11 @@ a.left-prev,
 a.right-next {
   display: none !important;
 }
+
+/* Hide light/dark mode toggle button */
+button.theme-toggle,
+button[aria-label*="light"],
+button[aria-label*="dark"],
+.theme-switch-button {
+  display: none !important;
+}
