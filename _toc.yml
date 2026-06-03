@@ -21,7 +21,7 @@ parts:
           - file: math/markdown/linear_algebra/index
             title: 線形代数
             sections:
-              - file: math/markdown/linear_algebra/eigenvalues 
+              - file: math/markdown/linear_algebra/eigen_value_vector 
           - file: math/markdown/fourier_analysis/index
             title: フーリエ解析
             sections:
