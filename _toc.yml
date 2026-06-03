@@ -1,5 +1,7 @@
 format: jb-book
 root: home
+options:
+  numbered: false
 
 parts:
   # --- ベクトルビーム ---
