@@ -1,0 +1,19 @@
+/* Hide Previous/Next navigation buttons */
+.prev-next-area {
+  display: none !important;
+}
+
+.prev-button,
+.next-button {
+  display: none !important;
+}
+
+/* Alternative selectors for different Jupyter Book versions */
+.prev-next-bottom {
+  display: none !important;
+}
+
+a.left-prev,
+a.right-next {
+  display: none !important;
+}
