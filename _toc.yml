@@ -10,8 +10,6 @@ parts:
           - file: vector_beam/markdown/research        
           - file: vector_beam/markdown/textbook
           - file: vector_beam/markdown/thesis
-          - file: vector_beam/markdown/jones_vector
-          - file: vector_beam/markdown/jones_matrix
 
   # --- 数学 ---
   - chapters:
@@ -33,6 +31,8 @@ parts:
         title: 物理
         sections:
           - file: physics/markdown/diffraction
+          - file: physics/markdown/jones_vector
+          - file: physics/markdown/jones_matrix
 
   # --- 情報 ---
   - chapters:
