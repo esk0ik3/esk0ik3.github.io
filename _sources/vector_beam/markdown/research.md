@@ -32,7 +32,12 @@
   <p style="margin-top: 5px; font-size: 0.9em;">シミュレーション</p>
 </div>
 
-しかし，実験では様々な要因によって，以下のようなラジアル偏光ビームになってしまいます．
+しかし，実験では
+
+- 光学系の収差
+- 光学素子の持つ，反射率，透過率，位相変化の偏光依存性
+
+という要因によって，以下のように，光強度分布が異なるラジアル偏光ビームになってしまいます．
 
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/exp_radial_intensity_1.png" 
