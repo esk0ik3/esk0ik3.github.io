@@ -332,7 +332,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -348,6 +350,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">偏光</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">スカラービームとベクトルビーム</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">研究内容</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -360,14 +372,25 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>概要<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <p>ここでは，自分が大学生の時に研究していた内容をざっくり説明します．途中で出てくる内容についてはこのあとの章で詳しく説明します．</p>
+<section id="id2">
+<h2>偏光<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>光は電磁波の一種であるので，その伝播方向と直交した方向に電場と磁場が振動しています．今，電場の振動方向を考える*と，光を迎える側から見た人からはどの方向に振動しているかということを考えることができます，これを偏光といいます．</p>
+<p>*物質と相互作用するのは電場であるため．例えば，カメラで撮影できるのは電場分布．</p>
+</section>
+<section id="id3">
+<h2>スカラービームとベクトルビーム<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>光はレーザーポインターのように大きさを持つので，各位置での振動方向というものが考えられます．しかし，一般的に使われているビームは，場所によらずにすべて同じ方向に振動しています．これをスカラービームと言います．それとは違って，この振動方向が位置によって異なるものをベクトルビームと言います．自分は，このベクトルビームというものを研究していました．</p>
 <p>ベクトルビームの例をいくつか下に示します．矢印はビーム断面内の電場の振動方向を表しています．</p>
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/radial_azimuthal_lemon_monstar_star.png" 
        style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
   <p style="margin-top: 5px; font-size: 0.9em;">ベクトルビームの例</p>
 </div>
+</section>
+<section id="id4">
+<h2>研究内容<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
 <p>自分の研究では，一番左側のラジアル偏光ビームを扱っていました．理論的には，以下のような光強度分布をもちます．</p>
-<p>ただし，左から全光強度，0°～135°偏光，LCP(左回り円偏光)，RCP(右回り円偏光)です．</p>
+<p>左から全光強度，0°～135°偏光，LCP(左回り円偏光)，RCP(右回り円偏光)です．</p>
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/sim_radial_intensity.png" 
        style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
@@ -379,7 +402,7 @@ document.write(`
        style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
   <p style="margin-top: 5px; font-size: 0.9em;">実験結果(補正前)</p>
 </div>
-<p>これを，空間光変調素子や，電動回転マウントによって，新たな光学素子を用いずに，動的に制御するという研究を行っていました．</p>
+<p>これを，空間光変調素子(SLM)や，電動回転マウントによって，新たに光学素子を追加せずに，動的にフィードバック制御する光学システムの構築，という研究を行っていました．</p>
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/esk0ik3/esk0ik3.github.io/main/vector_beam/fig/exp_radial_intensity_2.png" 
        style="width: 100%; background-color: white !important; padding: 10px; border: none !important; box-shadow: none !important; border-radius: 4px;">
@@ -408,6 +431,7 @@ document.write(`
   <p style="margin-top: 5px; font-size: 0.9em;">実験光学系</p>
 </div>
 <p>BS:ビームスプリッター, PBS:偏光ビームスプリッター, BE:ビームエキスパンダー, RAP:三角プリズム, SLM:空間光変調素子, HWP:1/2波長板, QWP:1/4波長板, SH sensor:シャックハルトマンセンサー.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -464,6 +488,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">偏光</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">スカラービームとベクトルビーム</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">研究内容</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
