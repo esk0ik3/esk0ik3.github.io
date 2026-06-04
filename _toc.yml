@@ -42,3 +42,10 @@ parts:
         title: 情報
         sections:
           - file: informatics/markdown/gs_algorithm
+          
+  # --- 光学 ---
+  - chapters:
+      - file: optics/index           # 光学の概要ページ
+        title: 光学
+        sections:
+          - file: optics/markdown/demo
