@@ -48,4 +48,4 @@ parts:
       - file: optics/index           # 光学の概要ページ
         title: 光学
         sections:
-          - file: optics/markdown/demo
+          - file: optics/markdown/rainbow
