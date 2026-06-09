@@ -64,36 +64,9 @@ $$
 
 ## 関連ページ
 
-### 方法1: HTMLカード型リンク（クリッカブル）
-
 <a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html" style="text-decoration: none; color: inherit;">
-  <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f9f9f9; cursor: pointer; transition: all 0.3s ease;">
-    <h3 style="margin-top: 0;">ジョーンズ行列</h3>
-    <p>光の偏光を行列で表現する理論について学びます。</p>
-  </div>
-</a>
-
-### 方法2: Markdownカード記法（CSS class使用）+ JavaScript
-
-{:.card-link href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html"}
-## ジョーンズ行列
-光の偏光を行列で表現する理論について学びます。
-
-<script>
-document.querySelectorAll('.card-link').forEach(card => {
-  const href = card.getAttribute('href');
-  card.style.cursor = 'pointer';
-  card.addEventListener('click', () => window.location.href = href);
-  card.addEventListener('mouseenter', () => card.style.opacity = '0.8');
-  card.addEventListener('mouseleave', () => card.style.opacity = '1');
-});
-</script>
-
-### 方法3: 引用ブロック形式（クリッカブル）
-
-<a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html" style="text-decoration: none; color: inherit;">
-  <div style="border-left: 4px solid #ccc; padding-left: 16px; margin: 16px 0; cursor: pointer; transition: opacity 0.3s ease;">
-    <strong>ジョーンズ行列</strong><br>
-    光の偏光を行列で表現する理論について学びます。
+  <div class="card" style="border: 1px solid #333; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #ffffff; color: #000000; cursor: pointer; transition: all 0.3s ease;">
+    <h3 style="margin-top: 0; color: #000000;">ジョーンズ行列</h3>
+    <p style="color: #000000;">光の偏光を行列で表現する理論について学びます。</p>
   </div>
 </a>
