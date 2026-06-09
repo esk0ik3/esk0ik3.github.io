@@ -27,7 +27,7 @@ $$
 \tag{2}
 $$
 
-と近似できるので，(2)式を用いると，(1)式は
+���近似できるので，(2)式を用いると，(1)式は
 
 $$
 \begin{aligned}
@@ -59,3 +59,25 @@ $$
 $$
 
 $$
+
+---
+
+## 関連ページ
+
+### 方法1: HTMLカード型リンク
+
+<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f9f9f9;">
+  <h3><a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html">ジョーンズ行列</a></h3>
+  <p>光の偏光を行列で表現する理論について学びます。</p>
+</div>
+
+### 方法2: Markdownカード記法（CSS class使用）
+
+{:.card}
+## [ジョーンズ行列](https://esk0ik3.github.io/physics/markdown/jones_matrix.html)
+光の偏光を行列で表現する理論について学びます。
+
+### 方法3: 引用ブロック形式
+
+> **[ジョーンズ行列](https://esk0ik3.github.io/physics/markdown/jones_matrix.html)**  
+> 光の偏光を行列で表現する理論について学びます。
