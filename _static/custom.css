@@ -27,14 +27,50 @@ a.right-next {
 html {
   color-scheme: dark !important;
   --pst-color-mode: dark !important;
+  
+  /* Color scheme updates: cyan/blue to green, purple unchanged */
+  --pst-color-primary: #00b366 !important;           /* 水色・青 → 緑 */
+  --pst-color-success: #00cc66 !important;           /* サクセス色も緑系 */
+  --pst-color-info: #00b366 !important;              /* 情報色も緑系 */
+  --pst-color-link: #00d966 !important;              /* リンク色を緑系に */
+  --pst-color-link-hover: #00ff99 !important;        /* ホバー時も緑系 */
+  /* --pst-color-danger は赤のままで変更しない */
+  /* --pst-color-warning は黄のままで変更しない */
+  /* --pst-color-secondary/accent/purple は紫のままで変更しない */
 }
 
 html[data-theme],
 html.dark {
   --pst-color-mode: dark !important;
+  --pst-color-primary: #00b366 !important;
+  --pst-color-success: #00cc66 !important;
+  --pst-color-info: #00b366 !important;
+  --pst-color-link: #00d966 !important;
+  --pst-color-link-hover: #00ff99 !important;
 }
 
 /* Prevent light mode switching */
 html[data-theme="light"] {
   --pst-color-mode: dark !important;
+  --pst-color-primary: #00b366 !important;
+  --pst-color-success: #00cc66 !important;
+  --pst-color-info: #00b366 !important;
+  --pst-color-link: #00d966 !important;
+  --pst-color-link-hover: #00ff99 !important;
+}
+
+/* 目次やナビゲーション要素の色変更 */
+.bd-toc-toggle,
+.toc-button,
+a:hover {
+  color: #00d966 !important;
+}
+
+/* リンク */
+a {
+  color: #00b366 !important;
+}
+
+a:visited {
+  color: #009944 !important;
 }
