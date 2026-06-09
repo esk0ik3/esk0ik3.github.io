@@ -367,12 +367,12 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">フレネル回折</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">関連ページ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html">方法1: HTMLカード型リンク</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-css-class">方法2: Markdownカード記法（CSS class使用）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html">方法1: HTMLカード型リンク（クリッカブル）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-css-class-javascript">方法2: Markdownカード記法（CSS class使用）+ JavaScript</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ジョーンズ行列</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法3: 引用ブロック形式</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法3: 引用ブロック形式（クリッカブル）</a></li>
 </ul>
 </li>
 </ul>
@@ -409,7 +409,7 @@ r &amp;= \sqrt{(x-x_0)^2+(y-y_0)^2+z^2} \newline
 \sqrt{1+\alpha} \approx 1+\frac{\alpha}{2}
 \tag{2}
 \]</div>
-<p>���近似できるので，(2)式を用いると，(1)式は</p>
+<p>と近似できるので，(2)式を用いると，(1)式は</p>
 <div class="math notranslate nohighlight">
 \[
 \begin{aligned}
@@ -440,26 +440,39 @@ U(x \, y)=\frac{1}{i \lambda} \iint^{\infty} _ {-\infty}{U _ 0(x _ 0 \, y _ 0)\f
 <section id="id3">
 <h2>関連ページ<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <section id="html">
-<h3>方法1: HTMLカード型リンク<a class="headerlink" href="#html" title="Permalink to this heading">#</a></h3>
-<div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f9f9f9;">
-  <h3><a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html">ジョーンズ行列</a></h3>
-  <p>光の偏光を行列で表現する理論について学びます。</p>
-</div>
+<h3>方法1: HTMLカード型リンク（クリッカブル）<a class="headerlink" href="#html" title="Permalink to this heading">#</a></h3>
+<a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html" style="text-decoration: none; color: inherit;">
+  <div class="card" style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 16px 0; background-color: #f9f9f9; cursor: pointer; transition: all 0.3s ease;">
+    <h3 style="margin-top: 0;">ジョーンズ行列</h3>
+    <p>光の偏光を行列で表現する理論について学びます。</p>
+  </div>
+</a>
 </section>
-<section id="markdown-css-class">
-<h3>方法2: Markdownカード記法（CSS class使用）<a class="headerlink" href="#markdown-css-class" title="Permalink to this heading">#</a></h3>
-<p>{:.card}</p>
+<section id="markdown-css-class-javascript">
+<h3>方法2: Markdownカード記法（CSS class使用）+ JavaScript<a class="headerlink" href="#markdown-css-class-javascript" title="Permalink to this heading">#</a></h3>
+<p>{:.card-link href=”<a class="reference external" href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html">https://esk0ik3.github.io/physics/markdown/jones_matrix.html</a>”}</p>
 </section>
 </section>
 <section id="id4">
-<h2><a class="reference external" href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html">ジョーンズ行列</a><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<h2>ジョーンズ行列<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
 <p>光の偏光を行列で表現する理論について学びます。</p>
+<script>
+document.querySelectorAll('.card-link').forEach(card => {
+  const href = card.getAttribute('href');
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => window.location.href = href);
+  card.addEventListener('mouseenter', () => card.style.opacity = '0.8');
+  card.addEventListener('mouseleave', () => card.style.opacity = '1');
+});
+</script>
 <section id="id5">
-<h3>方法3: 引用ブロック形式<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p><strong><a class="reference external" href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html">ジョーンズ行列</a></strong><br />
-光の偏光を行列で表現する理論について学びます。</p>
-</div></blockquote>
+<h3>方法3: 引用ブロック形式（クリッカブル）<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html" style="text-decoration: none; color: inherit;">
+  <div style="border-left: 4px solid #ccc; padding-left: 16px; margin: 16px 0; cursor: pointer; transition: opacity 0.3s ease;">
+    <strong>ジョーンズ行列</strong><br>
+    光の偏光を行列で表現する理論について学びます。
+  </div>
+</a>
 </section>
 </section>
 </section>
@@ -530,12 +543,12 @@ U(x \, y)=\frac{1}{i \lambda} \iint^{\infty} _ {-\infty}{U _ 0(x _ 0 \, y _ 0)\f
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">フレネル回折</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">関連ページ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html">方法1: HTMLカード型リンク</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-css-class">方法2: Markdownカード記法（CSS class使用）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html">方法1: HTMLカード型リンク（クリッカブル）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-css-class-javascript">方法2: Markdownカード記法（CSS class使用）+ JavaScript</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">ジョーンズ行列</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法3: 引用ブロック形式</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法3: 引用ブロック形式（クリッカブル）</a></li>
 </ul>
 </li>
 </ul>
