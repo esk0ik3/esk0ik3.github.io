@@ -65,7 +65,7 @@ $$
 ## 関連ページ
 
 <a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html" style="text-decoration: none; color: inherit;">
-  <div class="card" style="border: 4px solid #579aca; border-radius: 8px; padding: 20px; margin: 16px 0; background: #1e293b; color: #ffffff; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 4px 12px rgba(87, 154, 202, 0.15);" 
+  <div class="card" style="border: 3px solid #579aca; border-radius: 8px; padding: 20px; margin: 16px 0; background: #1e293b; color: #ffffff; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 4px 12px rgba(87, 154, 202, 0.15);" 
   onmouseover="this.style.boxShadow='0 12px 28px rgba(87, 154, 202, 0.55)'; this.style.transform='translateY(-4px)'; this.style.borderWidth='6px'; this.style.padding='18px';" 
   onmouseout="this.style.boxShadow='0 4px 12px rgba(87, 154, 202, 0.15)'; this.style.transform='translateY(0)'; this.style.borderWidth='4px'; this.style.padding='20px';">
     <h3 style="margin-top: 0; color: #ffffff; margin-bottom: 8px;">ジョーンズ行列</h3>
