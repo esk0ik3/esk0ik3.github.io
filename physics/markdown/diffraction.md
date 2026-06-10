@@ -1,8 +1,16 @@
-# <span style="color: #ffffff; display: inline-block; cursor: pointer; transition: all 0.3s ease; font-size: 2rem;" onmouseover="this.style.color='#579aca'; this.style.transform='translateX(6px)';" onmouseout="this.style.color='#ffffff'; this.style.transform='translateX(0)';">光の回折について</span>
+<h1 style="color: #ffffff; display: inline-block; cursor: pointer; transition: all 0.3s ease; font-size: 2rem; margin-bottom: 1rem;"
+    onmouseover="this.style.color='#579aca'; this.style.transform='translateX(6px)';"
+    onmouseout="this.style.color='#ffffff'; this.style.transform='translateX(0)';">
+  光の回折について
+</h1>
 
 ホログラムから出てきた光は，回折しながら伝播します．伝播後の像がどのように記述されるかを示します．
 
-## <span style="color: #ffffff; display: inline-block; cursor: pointer; transition: all 0.3s ease; font-size: 1.5rem;" onmouseover="this.style.color='#579aca'; this.style.transform='translateX(4px)';" onmouseout="this.style.color='#ffffff'; this.style.transform='translateX(0)';">フレネル回折</span>
+<h2 style="color: #ffffff; display: inline-block; cursor: pointer; transition: all 0.3s ease; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem;"
+    onmouseover="this.style.color='#579aca'; this.style.transform='translateX(4px)';"
+    onmouseout="this.style.color='#ffffff'; this.style.transform='translateX(0)';">
+  フレネル回折
+</h2>
 
 物体面での光の位置を$\, (x_0, \, y_0) \,$，観測面での位置座標を$\, (x, \, y) \,$とし，この間を距離$\, r \,$だけ伝播するという状況を考えます．
 
@@ -62,7 +70,11 @@ $$
 
 ---
 
-## <span style="color: #ffffff; display: inline-block; cursor: pointer; transition: all 0.3s ease; font-size: 1.5rem;" onmouseover="this.style.color='#579aca'; this.style.transform='translateX(4px)';" onmouseout="this.style.color='#ffffff'; this.style.transform='translateX(0)';">関連ページ</span>
+<h2 style="color: #ffffff; display: inline-block; cursor: pointer; transition: all 0.3s ease; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem;"
+    onmouseover="this.style.color='#579aca'; this.style.transform='translateX(4px)';"
+    onmouseout="this.style.color='#ffffff'; this.style.transform='translateX(0)';">
+  関連ページ
+</h2>
 
 <a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html" style="text-decoration: none; color: inherit;">
   <div class="card" style="border: 2px solid #579aca; border-left: 8px solid #579aca; border-radius: 8px; padding: 20px; margin: 16px 0; background: #1e293b; color: #ffffff; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(87, 154, 202, 0.15);" 
