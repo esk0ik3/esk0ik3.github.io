@@ -72,3 +72,14 @@ $$
     <p style="color: #ffffff; margin: 0;">光の偏光を行列で表現する理論について学びます。</p>
   </div>
 </a>
+
+<style>
+  /* 記事内のすべての ## 見出しに自動で下線を適用 */
+  h2 {
+    width: fit-content; /* 画面の端まで伸ばさず、文字の長さにピッタリ合わせる */
+    border-bottom: 2px solid #579aca; /* カードと同じ色の下線 */
+    padding-bottom: 4px; /* 文字と線の間のほどよい隙間 */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+</style>
