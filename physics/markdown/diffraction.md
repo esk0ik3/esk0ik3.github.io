@@ -2,7 +2,12 @@
 
 ホログラムから出てきた光は，回折しながら伝播します．伝播後の像がどのように記述されるかを示します．
 
-## フレネル回折
+<h2 style="color: #ffffff; display: inline-block; position: relative; padding-bottom: 4px; cursor: pointer; transition: color 0.3s ease;"
+    onmouseover="this.style.color='#4169e1'; this.children[0].style.width='100%';"
+    onmouseout="this.style.color='#ffffff'; this.children[0].style.width='0';">
+  フレネル回折
+  <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background-color: #4169e1; transition: width 0.3s ease;"></span>
+</h2>
 
 物体面での光の位置を$\, (x_0, \, y_0) \,$，観測面での位置座標を$\, (x, \, y) \,$とし，この間を距離$\, r \,$だけ伝播するという状況を考えます．
 
