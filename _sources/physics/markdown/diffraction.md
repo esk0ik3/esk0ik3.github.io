@@ -65,9 +65,9 @@ $$
 ## 関連ページ
 
 <a href="https://esk0ik3.github.io/physics/markdown/jones_matrix.html" style="text-decoration: none; color: inherit;">
-  <div class="card" style="border: 1px solid #334155; border-left: 5px solid #3373eb; border-radius: 8px; padding: 20px; margin: 16px 0; background: #1e293b; color: #ffffff; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);" 
-  onmouseover="this.style.boxShadow='0 12px 28px rgba(51, 115, 235, 0.4)'; this.style.transform='translateY(-4px)'; this.style.borderColor='#475569';" 
-  onmouseout="this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.5)'; this.style.transform='translateY(0)'; this.style.borderColor='#334155';">
+  <div class="card" style="border: 2px solid #3373eb; border-left: 8px solid #3373eb; border-radius: 8px; padding: 20px; margin: 16px 0; background: #1e293b; color: #ffffff; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(51, 115, 235, 0.1);" 
+  onmouseover="this.style.boxShadow='0 12px 28px rgba(51, 115, 235, 0.5)'; this.style.transform='translateY(-4px)'; this.style.borderWidth='3px'; this.style.borderLeftWidth='12px';" 
+  onmouseout="this.style.boxShadow='0 4px 12px rgba(51, 115, 235, 0.1)'; this.style.transform='translateY(0)'; this.style.borderWidth='2px'; this.style.borderLeftWidth='8px';">
     <h3 style="margin-top: 0; color: #ffffff; margin-bottom: 8px;">ジョーンズ行列</h3>
     <p style="color: #ffffff; margin: 0;">光の偏光を行列で表現する理論について学びます。</p>
   </div>
