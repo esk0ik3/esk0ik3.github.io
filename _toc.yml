@@ -12,6 +12,7 @@ parts:
           - file: vector_beam/markdown/research        
           - file: vector_beam/markdown/textbook
           - file: vector_beam/markdown/thesis
+          - file: vector_beam/notebooks/simulation
 
   # --- 数学 ---
   - chapters:
